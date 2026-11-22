@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>اختبار أزرار الفصلين — فيزياء 3</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f7f9;color:#163849;font-family:Tahoma,Arial,sans-serif}header{background:linear-gradient(130deg,#155e75,#25869a);color:white;padding:35px 20px;text-align:center}h1{font-size:24px;line-height:1.6;margin:0}main{max-width:720px;margin:30px auto;padding:0 16px}.buttons{display:flex;gap:10px;flex-wrap:wrap}.buttons button{flex:1;min-width:145px;background:white;border:2px solid #bfd6de;border-radius:14px;padding:18px 12px;font-size:17px;color:#155e75;font-weight:bold;cursor:pointer}.buttons button.active{background:#155e75;color:white;border-color:#155e75}.panel{margin-top:18px;background:#fff;border-radius:18px;padding:26px 20px;box-shadow:0 4px 18px #16384912;text-align:center;border-top:5px solid #155e75}.panel h2{font-size:23px;margin:8px 0 14px}.note{font-size:14px;color:#647987;line-height:1.9}.success{font-weight:bold;color:#26724c}footer{padding:15px 20px;text-align:center;font-size:13px;color:#657785}
+</style>
+</head>
+<body>
+<header><h1>📘 ملف الخطط العلاجية والإثرائية لمادة الفيزياء</h1><p>اختبار التنقل — ثالث ثانوي 1448هـ</p></header>
+<main>
+<div class="buttons"><button id="first" class="active" aria-pressed="true" type="button">📘 الفصل الدراسي الأول</button><button id="second" aria-pressed="false" type="button">📗 الفصل الدراسي الثاني</button></div>
+<section id="panel" class="panel" aria-live="polite"><h2>📘 الفصل الدراسي الأول</h2><p class="success">✅ الصفحة الأولى تعمل</p><p class="note">اضغطي على الفصل الدراسي الثاني لتجربة التنقل.</p></section>
+<p class="note">🔒 هذه نسخة تجريبية للواجهة فقط. لا تحتوي على بيانات طالبات أو حسابات تسجيل دخول أو ربط بالحفظ السحابي. لا تُستخدَم لإدخال بيانات حقيقية.</p>
+</main><footer>اختبار مستقل — لا يغيّر الموقع الأصلي</footer>
+<script>
+const first=document.getElementById('first'),second=document.getElementById('second'),panel=document.getElementById('panel');
+function choose(n){const one=n===1;first.classList.toggle('active',one);second.classList.toggle('active',!one);first.setAttribute('aria-pressed',String(one));second.setAttribute('aria-pressed',String(!one));panel.innerHTML=one?'<h2>📘 الفصل الدراسي الأول</h2><p class="success">✅ الصفحة الأولى تعمل</p><p class="note">اضغطي على الفصل الدراسي الثاني لتجربة التنقل.</p>':'<h2>📗 الفصل الدراسي الثاني</h2><p class="success">✅ نجح الانتقال إلى الفصل الثاني!</p><p class="note">يمكنك العودة إلى الفصل الأول بالضغط على زرّه.</p>';}
+first.addEventListener('click',()=>choose(1));second.addEventListener('click',()=>choose(2));
+</script>
+</body></html>
