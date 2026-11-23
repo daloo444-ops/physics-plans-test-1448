@@ -1,22 +1,609 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>اختبار أزرار الفصلين — فيزياء 3</title>
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ملف الخطط العلاجية والإثرائية لمادة الفيزياء</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#f3f7f9;color:#163849;font-family:Tahoma,Arial,sans-serif}header{background:linear-gradient(130deg,#155e75,#25869a);color:white;padding:35px 20px;text-align:center}h1{font-size:24px;line-height:1.6;margin:0}main{max-width:720px;margin:30px auto;padding:0 16px}.buttons{display:flex;gap:10px;flex-wrap:wrap}.buttons button{flex:1;min-width:145px;background:white;border:2px solid #bfd6de;border-radius:14px;padding:18px 12px;font-size:17px;color:#155e75;font-weight:bold;cursor:pointer}.buttons button.active{background:#155e75;color:white;border-color:#155e75}.panel{margin-top:18px;background:#fff;border-radius:18px;padding:26px 20px;box-shadow:0 4px 18px #16384912;text-align:center;border-top:5px solid #155e75}.panel h2{font-size:23px;margin:8px 0 14px}.note{font-size:14px;color:#647987;line-height:1.9}.success{font-weight:bold;color:#26724c}footer{padding:15px 20px;text-align:center;font-size:13px;color:#657785}
-</style>
-</head>
-<body>
-<header><h1>📘 ملف الخطط العلاجية والإثرائية لمادة الفيزياء</h1><p>اختبار التنقل — ثالث ثانوي 1448هـ</p></header>
-<main>
-<div class="buttons"><button id="first" class="active" aria-pressed="true" type="button">📘 الفصل الدراسي الأول</button><button id="second" aria-pressed="false" type="button">📗 الفصل الدراسي الثاني</button></div>
-<section id="panel" class="panel" aria-live="polite"><h2>📘 الفصل الدراسي الأول</h2><p class="success">✅ الصفحة الأولى تعمل</p><p class="note">اضغطي على الفصل الدراسي الثاني لتجربة التنقل.</p></section>
-<p class="note">🔒 هذه نسخة تجريبية للواجهة فقط. لا تحتوي على بيانات طالبات أو حسابات تسجيل دخول أو ربط بالحفظ السحابي. لا تُستخدَم لإدخال بيانات حقيقية.</p>
-</main><footer>اختبار مستقل — لا يغيّر الموقع الأصلي</footer>
-<script>
-const first=document.getElementById('first'),second=document.getElementById('second'),panel=document.getElementById('panel');
-function choose(n){const one=n===1;first.classList.toggle('active',one);second.classList.toggle('active',!one);first.setAttribute('aria-pressed',String(one));second.setAttribute('aria-pressed',String(!one));panel.innerHTML=one?'<h2>📘 الفصل الدراسي الأول</h2><p class="success">✅ الصفحة الأولى تعمل</p><p class="note">اضغطي على الفصل الدراسي الثاني لتجربة التنقل.</p>':'<h2>📗 الفصل الدراسي الثاني</h2><p class="success">✅ نجح الانتقال إلى الفصل الثاني!</p><p class="note">يمكنك العودة إلى الفصل الأول بالضغط على زرّه.</p>';}
-first.addEventListener('click',()=>choose(1));second.addEventListener('click',()=>choose(2));
-</script>
-</body></html>
+:root{--ink:#173042;--muted:#6b7b87;--bg:#f4f7fa;--white:#fff;--navy:#155e75;--blue:#397ca8;--green:#4d8a68;--rose:#a86678;--orange:#c67c3c;--purple:#7663a8;--gold:#b89139}*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink)}header{background:linear-gradient(135deg,#155e75,#25869a);color:#fff;padding:28px 18px}.wrap{max-width:1080px;margin:auto;padding:16px}h1{font-size:26px;margin:0 0 8px}header p{margin:5px 0}.progress{height:7px;background:#dce6eb;position:sticky;top:0;z-index:50}.progress>div{height:100%;width:14.28%;background:#2f8397;transition:.25s}.nav{display:flex;gap:8px;overflow:auto;padding:14px 0 6px;position:sticky;top:7px;background:var(--bg);z-index:40}.nav button,.btn{border:0;border-radius:13px;padding:11px 14px;background:#fff;color:#285a6d;font-weight:800;box-shadow:0 2px 9px #0001;white-space:nowrap}.nav button.active{color:#fff}.nav button[data-page="home"].active{background:var(--navy)}.nav button[data-page="distribution"].active{background:var(--blue)}.nav button[data-page="plans"].active{background:var(--green)}.nav button[data-page="students"].active{background:var(--rose)}.nav button[data-page="evidence"].active{background:var(--orange)}.nav button[data-page="impact"].active{background:var(--purple)}.nav button[data-page="grades"].active{background:#4c7093}.nav button[data-page="summary"].active{background:var(--gold)}.page{display:none}body:not(.teacher-mode) .page:not(#home){display:none!important}body:not(.teacher-mode) #home{display:block!important}body:not(.teacher-mode) #home>.card{display:none!important}body:not(.teacher-mode) .nav{display:none!important}.page.active{display:block}.card{background:#fff;border-radius:18px;padding:17px;margin:13px 0;box-shadow:0 4px 18px #18304212}.card h2,.card h3{margin-top:0}.section-home{border-top:5px solid var(--navy)}.section-dist{border-top:5px solid var(--blue)}.section-plan{border-top:5px solid var(--green)}.section-student{border-top:5px solid var(--rose)}.section-evidence{border-top:5px solid var(--orange)}.section-impact{border-top:5px solid var(--purple)}.section-summary{border-top:5px solid var(--gold)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}label{display:block;font-weight:800;font-size:13px;margin:10px 0 5px}input,textarea,select{width:100%;padding:11px;border:1px solid #cedbe1;border-radius:11px;background:#fff;font:inherit}textarea{min-height:90px;resize:vertical}.week{border-right:6px solid var(--green)}.week.done{background:#f7fff9}.badge,.pill{display:inline-block;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:800;background:#edf5f7;color:#25657b}.small{font-size:12px;color:var(--muted)}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.save{background:#3f835f;color:#fff}.danger{background:#fff0f0;color:#a33}.attach-btn{background:#fff4e9;color:#9a5b22}.week-files{margin-top:13px;padding:12px;background:#fbf7f2;border:1px dashed #e2b98d;border-radius:14px}.evidence-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:10px}.ev-card{background:#fff;border:1px solid #eadfd4;border-radius:14px;padding:10px}.ev-card img{width:100%;height:145px;object-fit:cover;border-radius:10px}.ev-card a{color:#176b87;font-weight:700;text-decoration:none}.nav-bottom{display:flex;justify-content:space-between;gap:10px;margin:18px 0}.nav-bottom button{flex:1}.stat{font-size:30px;font-weight:900}.student-tabs{display:flex;gap:8px;flex-wrap:wrap}.student-tabs button{border:1px solid #dccbd1;background:#fff;padding:9px 12px;border-radius:11px;font-weight:800}.student-tabs button.active{background:var(--rose);color:#fff}.student-card{padding:10px;border-bottom:1px solid #eee;display:grid;grid-template-columns:auto 2fr 1fr 1fr;gap:8px;align-items:center}.student-card input[type=checkbox]{width:22px;height:22px}.score-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid #eee}.plan-group{border-right:5px solid var(--rose)}.assessment-box{margin-top:12px;padding:14px;border-radius:14px;background:#f7f5ff;border:1px solid #ded7f2}.assessment-box h4{margin:8px 0}.qcard{background:#fff;border-radius:11px;padding:10px;margin:7px 0;border:1px solid #e6e0f3}.score-guide{background:#eef8f1;border-radius:11px;padding:10px;margin-top:10px;font-weight:700}.enrich-box{background:#fff8e8;border:1px solid #ead49b;border-radius:12px;padding:12px;margin-top:10px}.loginbox{background:#eef7fa;border:1px solid #cde3ea;border-radius:14px;padding:12px;margin:10px 0}.cloud-ok{color:#2e7d5b}.cloud-bad{color:#a33}.teacher-only{display:none}.teacher-mode .teacher-only{display:flex}.teacher-mode .teacher-only.block{display:block}table{width:100%;border-collapse:collapse;font-size:13px}th,td{border:1px solid #dce4e8;padding:8px;text-align:center}th{background:#edf5f8}@media(max-width:720px){.row{grid-template-columns:1fr}.score-row{grid-template-columns:1fr 1fr 1fr}.score-row b{grid-column:1/-1}.wrap{padding:11px}h1{font-size:22px}.student-card{grid-template-columns:1fr}.nav{top:7px}}@media print{.nav,.progress,.nav-bottom,.actions,.loginbox{display:none!important}.page{display:block!important}.card{box-shadow:none;break-inside:avoid}}
+/* التنقل بين فصلي العام دون تغيير بيانات الفصل الأول */
+.semester-switch{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0 4px}
+.semester-switch button{flex:1;min-width:145px;padding:12px;border:1px solid #bed7df;border-radius:13px;background:#fff;color:#155e75;font-weight:800;font:inherit;cursor:pointer}
+.semester-switch button.active{background:#155e75;color:#fff;border-color:#155e75}
+.semester-notice{display:none;text-align:center;border-top:5px solid var(--navy)}
+body.semester-two .semester-notice{display:block}
+body.semester-two .nav,body.semester-two .nav-bottom,body.semester-two .page{display:none!important}
+@media print{.semester-switch,.semester-notice{display:none!important}}
+</style></head><body><div class="progress"><div id="progressBar"></div></div><header><div class="wrap"><h1>📘 ملف الخطط العلاجية والإثرائية لمادة الفيزياء</h1><p>الصف الثالث الثانوي – العام الدراسي 1448هـ</p><p>معلمة المادة: أ. دلال محمد عسيري</p></div></header><div class="wrap">
+<div class="semester-switch" role="group" aria-label="اختيار الفصل الدراسي"><button type="button" id="semesterOneBtn" class="active" aria-pressed="true" onclick="selectSemester(1)">📘 الفصل الدراسي الأول</button><button type="button" id="semesterTwoBtn" aria-pressed="false" onclick="selectSemester(2)">📗 الفصل الدراسي الثاني</button></div>
+<div class="card semester-notice" id="semesterTwoNotice"><h2>📗 الفصل الدراسي الثاني</h2><p>هذا القسم مخصص لخطط الفصل الدراسي الثاني وشواهده وقياس أثره.</p><p class="small">ستُضاف الأسابيع والتوزيع الدراسي بعد اعتمادهما، مع الحفاظ على جميع بيانات الفصل الدراسي الأول دون تغيير.</p><button type="button" class="btn" onclick="selectSemester(1)">العودة إلى الفصل الدراسي الأول</button></div>
+<div class="nav" id="nav"><button data-page="home">🏠 الرئيسية</button><button data-page="distribution">🗓️ التوزيع</button><button data-page="plans">🩺 الخطط</button><button data-page="students">👩🏻‍🎓 المتابعة</button><button data-page="evidence">📎 الشواهد</button><button data-page="impact">📊 قياس الأثر</button><button data-page="grades">📝 درجات الفترة</button><button data-page="summary">✅ الملخص</button></div>
+<section id="home" class="page"><div class="card section-home"><h2>مرحبًا بكِ 🌷</h2><p>ملف إلكتروني مرتب للتصفح من توزيع المنهج إلى الخطط والمتابعة والشواهد وقياس الأثر. يُرفع الشاهد مرة واحدة داخل الأسبوع ويظهر تلقائيًا في سجل الشواهد العام.</p><div class="grid"><div><b>الأسابيع المنفذة</b><div id="doneCount" class="stat">0</div></div><div><b>إجمالي الشواهد</b><div id="evCount" class="stat">0</div></div><div><b>طالبات الملف</b><div class="stat">يظهر بعد تسجيل الدخول</div></div></div><div class="actions"><button class="btn" onclick="window.print()">🖨️ طباعة / PDF</button><button class="btn" onclick="exportData()">⬇️ نسخة احتياطية</button><label class="btn">⬆️ استعادة<input type="file" accept="application/json" hidden onchange="importData(event)"></label></div></div><div class="loginbox"><b>☁️ الحفظ السحابي — ملف الخطط فقط</b><p class="small">بعد تسجيل الدخول تُحمّل بيانات السحابة تلقائيًا، مع الاحتفاظ بنسخة احتياطية من بيانات الجهاز.</p><div id="loginFields"><label>البريد الإلكتروني</label><input id="loginEmail" type="email" autocomplete="username"><label>كلمة المرور</label><input id="loginPassword" type="password" autocomplete="current-password"><button class="btn save" onclick="teacherLogin()">🔐 دخول المعلمة</button></div><p id="cloudStatus" class="small">غير متصلة</p><div class="actions"><button class="btn save" onclick="manualCloudBackup()">☁️ حفظ في السحابة</button><button class="btn" onclick="loadCloudManually()">⬇️ تحميل من السحابة</button><button class="btn" onclick="teacherLogout()">خروج</button></div><p class="small">احفظي نسخة JSON احتياطية قبل تحميل بيانات السحابة. رفع الشواهد مخصص لحساب المعلمة، وتُحفظ الملفات بصورة خاصة على Netlify.</p></div></div></section>
+<section id="distribution" class="page"><div class="card section-dist"><h2>🗓️ التوزيع الأسبوعي المعتمد</h2><table><thead><tr><th>الأسبوع</th><th>الموضوع</th></tr></thead><tbody id="distTable"></tbody></table></div></section>
+<section id="plans" class="page"><h2>🩺 الخطط العلاجية والإثرائية</h2><p class="small">كل أسبوع يحتوي الخطة والقياس والمرفقات الخاصة به في مكان واحد.</p><div id="weeks"></div></section>
+<section id="students" class="page"><div class="card section-student">
+<h2>👩🏻‍🎓 متابعة الطالبات</h2>
+<p class="small">اختاري الشعبة ثم حددي مجموعة الطالبات دفعة واحدة، واكتبي الدرس/المهارة مرة واحدة. بعد التنفيذ يمكنكِ فتح نفس المجموعة وإضافة الدرجات البعدية.</p>
+<div class="student-tabs" id="sectionTabs"><button onclick="setSection('1',this)">الشعبة 1</button><button onclick="setSection('2',this)">الشعبة 2</button><button onclick="setSection('3',this)">الشعبة 3</button></div>
+<input id="studentSearch" placeholder="🔎 ابحثي باسم الطالبة" oninput="renderRoster()">
+<div id="sectionSummary" class="small"></div>
+<div class="actions teacher-only"><button class="btn" onclick="selectVisibleStudents(true)">☑️ تحديد الظاهرات</button><button class="btn" onclick="selectVisibleStudents(false)">إلغاء التحديد</button></div>
+<div id="rosterList"></div>
+<hr>
+<h3>🩺 خطة جماعية سريعة</h3>
+<div class="row"><div><label>الأسبوع / الدرس</label><select id="groupWeek" onchange="loadReadyAssessment()"></select></div><div><label>نوع الخطة</label><select id="groupType" onchange="loadReadyAssessment();renderSelectedScores()"><option>علاجية</option><option>إثرائية</option></select></div></div>
+<label>الدرس / المهارة</label><input id="groupSkill" placeholder="يُعبأ تلقائيًا ويمكن تعديله">
+<div id="readyAssessment" class="assessment-box"></div>
+<label>ملاحظات / وصف مختصر للخطة</label><textarea id="groupNote" placeholder="اختياري"></textarea>
+<div id="selectedScores"></div>
+<div class="actions teacher-only"><button class="btn save" onclick="saveGroupPlan()">💾 حفظ المجموعة</button><button class="btn" onclick="clearGroupForm()">مسح الاختيار</button></div>
+<hr>
+<h3>📋 الخطط المحفوظة</h3><div id="groupPlansList"></div>
+<div class="actions teacher-only"><button class="btn" onclick="addRosterName()">+ إضافة طالبة</button></div>
+</div></section>
+<section id="evidence" class="page"><div class="card" style="border:1px solid #c4dbe3;background:#f0f8fb" id="github-evidence-notice"><b>📎 الشواهد محفوظة في موقع Netlify الأصلي</b><p>هذا الإصدار يعمل عبر GitHub Pages للخطط والمتابعة ودرجات الفترة. ملفات الشواهد السابقة محفوظة بخدمة Netlify خاصة؛ ولعرضها أو إضافة ملفات جديدة استخدمي الموقع الأصلي بعد تسجيل الدخول. لا ترفعي الشواهد إلى GitHub العام.</p><p><a href="https://reliable-boba-6c1eba.netlify.app/" target="_blank" rel="noopener noreferrer">فتح موقع الشواهد الأصلي على Netlify</a></p></div><div class="card section-evidence"><h2>📎 سجل الشواهد والمرفقات</h2><p>هذا القسم يتجمع <b>تلقائيًا</b> من مرفقات الأسابيع؛ لا حاجة لإعادة الرفع.</p><div class="row"><select id="evWeekFilter" onchange="renderEvidence()"><option value="">كل الأسابيع</option></select><select id="evTypeFilter" onchange="renderEvidence()"><option value="">كل الأنواع</option><option>صورة تنفيذ</option><option>اختبار قبلي</option><option>اختبار بعدي</option><option>ورقة عمل</option><option>نشاط علاجي</option><option>نشاط إثرائي</option><option>قياس أثر</option><option>مرفق إضافي</option></select></div><div id="evidenceList" class="evidence-grid"></div></div></section>
+<section id="impact" class="page"><div class="card section-impact teacher-only block" id="verified-impact-report"><style>#verified-impact-report .track{height:8px;background:#e9eff2}#verified-impact-report .track div{height:8px;background:#27966b}</style><h2>📊 تقرير مقارنة الأداء وقياس الأثر</h2><p>فيزياء ٣ | ثالث ثانوي | الفصل الأول ١٤٤٨هـ</p><p>متوسطة وثانوية النجامية — إعداد: أ. دلال عسيري</p><div class="kpi">90.42% ← 96.41%<small>متوسط التشخيصي ثم درجات الفترة | 71 طالبة في التقرير السابق</small></div><p class="small" style="background:#eef7fa;border-radius:12px;padding:12px"><b>مراجعة قوائم الطالبات:</b> العدد الحالي 72 طالبة (الأولى 25، الثانية 21، الثالثة 26). التقرير السابق شمل مقارنة 71 طالبة، واستبعد الطالبة التي لم تؤدِّ التشخيصي من المقارنة الفردية لعدم وجود نتيجة تشخيصية لها. وجوري عكور غير موجودة في القائمة المعتمدة الحالية. عائشة تُتابَع في الفترة فقط دون احتساب تحسن من تشخيصي غير موجود.</p><h3>مقارنة الشعب — بحسب التقرير السابق</h3><table><tr><th>الشعبة</th><th>العدد المقارن</th><th>التشخيصي</th><th>الفترة</th></tr><tr><td>الأولى</td><td>25</td><td>91.40%</td><td>97.00%</td></tr><tr><td>الثانية</td><td>20</td><td>87.25%</td><td>94.25%</td></tr><tr><td>الثالثة</td><td>26</td><td>91.92%</td><td>97.50%</td></tr></table><p class="small">حساب تحقق حسابي: المتوسط الكلي المرجّح من متوسطات الشعب = 90.42% للتشخيصي، و96.41% للفترة. القيم الفردية لدرجات الفترة ليست مضمنة في نسخة JSON الاحتياطية الحالية.</p><h3>اتجاه تغير الدرجات — بحسب التقرير السابق</h3><p>تحسن — 29 طالبة (40.8%)</p><div class="track"><div style="width:40.845070422535215%"></div></div><p>ثبات — 32 طالبة (45.1%)</p><div class="track"><div style="width:45.07042253521127%"></div></div><p>انخفاض — 10 طالبات (14.1%)</p><div class="track"><div style="width:14.084507042253522%"></div></div><h3>مجموعة العلاج المكثف</h3><table><tr><th>المؤشر</th><th>التشخيصي</th><th>الفترة</th></tr><tr><td>متوسط خمس طالبات</td><td>26%</td><td>94%</td></tr></table><p>تحسنت درجات الطالبات الخمس جميعًا. يوصى باستمرار المتابعة، ومعالجة الانخفاضات الفردية، وإثراء المتقنات.</p><p class="note">المنهجية: استبعاد المنتقلة ومن لم تؤد التشخيصي من المقارنة. المصدر: نتائج تقرير المقارنة السابق المدمج في الموقع، وقائمة الطالبات وسجلات الخطط في نسخة JSON الاحتياطية. تم التحقق من العدد الحالي للشعب ومن الاتساق الحسابي للمتوسطات، وليس من درجات الفترة الفردية أو من مطابقة الأزواج مجددًا. درجات الفترة مؤشر أداء وليست اختبارًا بعديًا مكافئًا؛ لا تثبت المقارنة وحدها أثرًا سببيًا. الأرقام المعروضة بحاجة إلى مراجعة كشف درجات الفترة الأصلي قبل الاعتماد الرسمي النهائي.</p></div><div class="card section-impact"><h2>📊 قياس الأثر</h2><div class="grid"><div><span class="small">متوسط القبلي للسجلات المكتملة (قبلي وبعدي)</span><div id="autoPre" class="stat">—</div></div><div><span class="small">متوسط البعدي للسجلات المكتملة</span><div id="autoPost" class="stat">—</div></div><div><span class="small">مقدار التحسن</span><div id="autoGrowth" class="stat">—</div></div></div><label>أبرز أثر تحقق</label><textarea id="impactText"></textarea><label>التوصية للفترة القادمة</label><textarea id="recommendation"></textarea><div class="actions"><button class="btn save" onclick="saveImpact()">💾 حفظ</button></div></div></section>
+<section id="grades" class="page"><div class="card section-dist">
+<h2>📝 درجات الفترة – من 20</h2>
+<p class="small">هذه الصفحة مخصصة لاستيراد ومراجعة درجات الفترة (72 درجة مؤكدة)، وهي مستقلة عن الاختبار البعدي للخطط العلاجية. البيانات هنا تُحفظ <b>على هذا الجهاز فقط</b> حتى تصدّري ملف الدرجات. لا تُرسل درجات الفترة تلقائيًا إلى السحابة.</p>
+<div class="student-tabs" id="gradeTabs"><button type="button" onclick="setGradeSection('1')">الشعبة الأولى</button><button type="button" onclick="setGradeSection('2')">الشعبة الثانية</button><button type="button" onclick="setGradeSection('3')">الشعبة الثالثة</button></div>
+<div class="actions"><button class="btn save" type="button" onclick="exportPeriodGrades()">⬇️ تنزيل نسخة درجات الفترة JSON</button><button class="btn" type="button" onclick="exportPeriodCSV()">📄 تنزيل CSV</button><label class="btn">⬆️ استيراد درجات الفترة <input hidden type="file" accept=".json,application/json" onchange="importPeriodGrades(event)"></label></div>
+<div class="actions teacher-only" style="margin:12px 0"><button class="btn save" type="button" onclick="savePeriodGradesToCloud()">☁️ حفظ درجات الفترة الـ72 في السحابة والتحقق</button><button class="btn" type="button" onclick="loadPeriodGradesFromCloud()">⬇️ استرجاع درجات الفترة من السحابة</button></div>
+<p class="small" style="background:#eef7fa;padding:11px;border-radius:10px">يحفظ هذا الإجراء درجات الفترة وحدها في سجل سحابي مستقل منطقيًا داخل ملف الخطط. لا يغير أسماء الطالبات أو خطط الأسابيع أو الشواهد. لا تنفذي الحفظ قبل التأكد من تحميل السحابة واستيراد 72 درجة؛ يجب أن تؤكد لك الصفحة التحقق من الخادم. يتطلب صلاحيات Firebase المناسبة.</p>
+<p id="gradeCloudStatus" class="small" role="status">☁️ لم يُتحقق من الحفظ السحابي لدرجات الفترة بعد.</p>
+<p id="gradeSaveStatus" class="small" role="status">الدرجات غير مستوردة بعد. استوردي ملف درجات الفترة المكتمل (72 طالبة) بعد تسجيل الدخول ثم استخدمي زر حفظ الدرجات سحابيًا والتحقق؛ لا ترفعي ملف الدرجات إلى GitHub.</p><p class="small" style="padding:12px;background:#fff8e9;border-radius:12px">تم استكمال درجات الفترة لجميع الطالبات الـ72، بما فيها الطالبتين اللتين تم تأكيد درجتيهما (20/20 لكل منهما بتأكيد المعلمة). استوردي ملف الدرجات الخاص عبر الزر أعلاه بعد فتح الموقع في متصفح مدعوم وتسجيل الدخول. تقرير المقارنة التاريخي منفصل، ولا يُعاد احتسابه بالكامل حتى تتوفر درجات التشخيصي الفردية.</p>
+<div class="grid"><div><b>درجات الفترة المحفوظة محليًا</b><div id="gradesFilled" class="stat">0 / 72</div></div><div><b>مقارنات متاحة من التشخيصي المسجّل</b><div id="gradesPaired" class="stat">0</div></div><div><b>متوسط درجات الفترة المتاحة</b><div id="gradesMean" class="stat">—</div></div></div>
+<p id="gradeSectionStats" class="small"></p><div style="overflow-x:auto"><table><thead><tr><th>اسم الطالبة</th><th>التشخيصي المتوفر</th><th>درجة الفترة / 20</th><th>التغير</th></tr></thead><tbody id="gradeRows"></tbody></table></div>
+<p class="small">إذا لم تظهر الأسماء، افتحي الموقع الأصلي وسجّلي دخول المعلمة حتى تُحمّل قوائم الطالبات. لا تدخلي درجة تشخيصي لالطالبة التي لم تؤدِّ التشخيصي؛ فهي غير مشاركة في الاختبار التشخيصي.</p>
+</div></section>
+<section id="summary" class="page"><div class="card section-summary"><h2>✅ الملخص النهائي</h2><div class="grid"><div><b>الأسابيع المنفذة</b><div id="sumDone" class="stat"></div></div><div><b>الشواهد</b><div id="sumEv" class="stat"></div></div><div><b>سجلات المتابعة</b><div id="sumStudents" class="stat"></div></div></div><p id="sumImpact"></p></div></section>
+<div class="nav-bottom"><button class="btn" id="prevBtn" onclick="movePage(-1)">→ السابق</button><button class="btn save" id="nextBtn" onclick="movePage(1)">التالي ←</button></div></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script><script>const firebaseConfig={"apiKey": "AIzaSyBjpuJ1Rifnm17dT93POtFeFAVCZzbKlxQ", "authDomain": "dalal-smart-plans-1448.firebaseapp.com", "projectId": "dalal-smart-plans-1448", "storageBucket": "dalal-smart-plans-1448.firebasestorage.app", "messagingSenderId": "64647819122", "appId": "1:64647819122:web:0c75fdf9d24a10b1af77eb"};firebase.initializeApp(firebaseConfig);const fbAuth=firebase.auth(),fbDb=firebase.firestore(),CLOUD_DOC=fbDb.collection('plans1448').doc('physics3');const TEACHER_UID='CAeHXohV35SUnumZu4AxSBbn4V33';let cloudRevision=null,cloudEnabled=false,cloudBusy=false,cloudTimer=null;const authorized=()=>fbAuth.currentUser?.uid===TEACHER_UID;</script><script>
+const dist=[
+['1','حالات المادة: خصائص الموائع - التمهيد'],['2','حالات المادة: القوى داخل السوائل - الموائع الساكنة والمتحركة'],['3','حالات المادة: المواد الصلبة + مراجعة'],['4','الاهتزازات والموجات: الحركة الدورية - خصائص الموجات'],['5','الاهتزازات والموجات: سلوك الموجات + مراجعة'],['6','الصوت: خصائص الصوت والكشف عنه + مراجعة - الرنين في الأعمدة الهوائية والأوتار'],['7','أساسيات الضوء: الاستضاءة'],['8','أساسيات الضوء: الطبيعة الموجية للضوء + مراجعة'],['9','الانعكاس والمرايا: الانعكاس عن المرايا المستوية + مراجعة - المرايا الكروية'],['10','الانكسار والعدسات: انكسار الضوء'],['11','الانكسار والعدسات: العدسات المحدبة والمقعرة + مراجعة - تطبيقات العدسات'],['12','التداخل والحيود: التداخل + مراجعة - الحيود'],['13','الكهرباء الساكنة: الشحنة الكهربائية'],['14','الكهرباء الساكنة: القوة الكهربائية'],['15','المجالات الكهربائية: توليد المجالات الكهربائية وقياسها'],['16','المجالات الكهربائية: تطبيقات المجالات الكهربائية + مراجعة'],['17','مراجعة عامة'],['18','اختبارات شفهية وعملية'],['19','اختبارات نهائية']]; const READY_ASSESSMENTS={"1":[["ما المقصود بالمائع؟","ما المقصود بالكثافة؟","هل يأخذ السائل شكل الوعاء؟"],["السوائل والغازات","كتلة وحدة الحجوم","نعم"],["لماذا يعد الهواء مائعًا؟","ماذا يحدث للكثافة إذا زادت الكتلة للحجم نفسه؟","اذكري خاصية للموائع."],["لأنه ينساب","تزداد","تنساب وتأخذ شكل الوعاء"],"تصنيف أمثلة حياتية إلى موائع وغير موائع مع تفسير الاختيار.","مقارنة سلوك مائعين في موقف حياتي وتصميم بطاقة تشرح تطبيقًا هندسيًا أو طبيًا."],"2":[["ماذا يحدث لضغط السائل بزيادة العمق؟","ما سبب التوتر السطحي؟","إذا ضاق أنبوب المائع فماذا يحدث لسرعته؟"],["يزداد","قوى التماسك","تزداد"],["أين ضغط الماء أكبر: السطح أم العمق؟","لماذا تمشي بعض الحشرات على الماء؟","وفق برنولي ماذا يحدث للضغط عند زيادة السرعة؟"],["العمق","التوتر السطحي","يقل"],"تجربة التوتر السطحي أو النفخ بين ورقتين وتفسير النتيجة.","البحث عن تطبيق لمبدأ برنولي وتصويره أو رسمه مع تفسير علمي."],"3":[["هل للصلب شكل محدد؟","كيف تكون جسيمات الصلب؟","ما التمدد الحراري؟"],["نعم","متقاربة","زيادة الأبعاد بالتسخين"],["لماذا يحافظ الصلب على شكله؟","ماذا يحدث لأبعاده بالتسخين؟","اذكري تطبيقًا للتمدد الحراري."],["قوة الترابط","تزداد","فواصل الجسور"],"رسم نموذج جسيمات المادة الصلبة ومقارنته بالسائل.","تصميم تفسير مصور لأهمية فواصل التمدد في الجسور."],"4":[["ما الحركة الدورية؟","ما الزمن الدوري؟","ما التردد؟"],["حركة تتكرر بانتظام","زمن دورة كاملة","عدد الاهتزازات في الثانية"],["إذا زاد التردد ماذا يحدث للزمن الدوري؟","وحدة التردد؟","المسافة بين قمتين؟"],["يقل","هرتز","الطول الموجي"],"قياس اهتزازات بندول وحساب التردد والزمن الدوري.","تحليل موجة مرسومة واستنتاج أثر تغيير التردد أو الطول الموجي."],"5":[["ما انعكاس الموجة؟","ما انكسار الموجة؟","ما التداخل؟"],["ارتدادها","تغير اتجاهها","تراكب موجتين"],["مثال على الانعكاس؟","سبب الانكسار؟","متى يكون التداخل بنّاءً؟"],["الصدى","تغير السرعة","عندما تزداد السعة"],"رسم أمثلة للانعكاس والانكسار والتداخل.","تحليل موقف موجي حقيقي وتحديد السلوك الموجي وتبريره."],"6":[["هل ينتقل الصوت في الفراغ؟","بم ترتبط درجة الصوت؟","ما الرنين؟"],["لا","التردد","زيادة السعة عند توافق الترددات"],["لماذا لا نسمع في الفراغ؟","الصوت الأعلى درجة تردده؟","متى يحدث الرنين؟"],["لا يوجد وسط","أكبر","عند توافق الترددات"],"مقارنة أصوات مختلفة وربط الدرجة بالتردد.","استقصاء أثر طول عمود هوائي أو وتر في النغمة وتفسيره."],"7":[["ما الاستضاءة؟","هل تقل بالابتعاد عن المصدر؟","وحدتها؟"],["التدفق الضوئي لكل مساحة","نعم","لوكس"],["أين الاستضاءة أكبر قرب المصباح أم بعيدًا؟","علاقتها بالمسافة؟","وحدتها؟"],["قرب المصباح","تتناقص مع مربع المسافة","لوكس"],"مقارنة إضاءة سطح عند مسافات مختلفة.","اقتراح تصميم إضاءة صفية يحقق كفاءة واستضاءة مناسبة."],"8":[["هل الضوء موجة كهرومغناطيسية؟","هل يحتاج وسطًا؟","سرعته في الفراغ؟"],["نعم","لا","3×10^8 m/s"],["لماذا يصل ضوء الشمس عبر الفراغ؟","أين سرعته أكبر؟","علاقة v و f و λ؟"],["لا يحتاج وسطًا","في الفراغ","v=fλ"],"استخدام مخطط الطيف لتحديد الضوء المرئي.","مقارنة منطقتين من الطيف الكهرومغناطيسي وتطبيقاتهما."],"9":[["قانون الانعكاس؟","صفة صورة المرآة المستوية؟","أي مرآة تجمع الأشعة؟"],["زاوية السقوط=الانعكاس","وهمية معتدلة مساوية","المقعرة"],["إذا كانت زاوية السقوط 30° فالانعكاس؟","صورة المستوية حقيقية أم وهمية؟","مرآة التكبير؟"],["30°","وهمية","المقعرة"],"رسم شعاع ساقط ومنعكس وتكوين صورة في مرآة مستوية.","تصميم موقف يوضح استخدام مرآة مناسبة مع تبرير الاختيار."],"10":[["ما الانكسار؟","متى ينحرف الضوء نحو العمود؟","ما معامل الانكسار؟"],["تغير اتجاه الضوء","عند دخوله وسطًا أبطأ","c/v"],["لماذا تبدو الملعقة منكسرة؟","إذا قلت سرعة الضوء فمعامل الانكسار؟","من الهواء للزجاج ينحرف نحو؟"],["الانكسار","يزداد","العمود"],"قلم في كأس ماء مع رسم مسار الضوء.","تفسير ظاهرة السراب أو العمق الظاهري باستخدام الانكسار."],"11":[["أي عدسة تجمع الأشعة؟","أي عدسة تفرقها؟","ما البؤرة؟"],["المحدبة","المقعرة","نقطة تجمع الأشعة"],["عدسة المكبرة؟","أثر المقعرة؟","تطبيق للعدسات؟"],["محدبة","تفرق الأشعة","النظارات/الكاميرا"],"تصنيف عدسات وربطها بتطبيقاتها.","تحليل نظام بصري بسيط واختيار العدسة المناسبة مع التبرير."],"12":[["ما التداخل؟","ما الحيود؟","متى يكون التداخل بنّاءً؟"],["تراكب موجتين","انحناء حول الحواف","عند التعزيز"],["نتيجة التداخل الهدام؟","يزداد الحيود عندما تكون الفتحة قريبة من؟","هل يظهر الضوء حيودًا؟"],["انخفاض السعة","الطول الموجي","نعم"],"تحليل نمط أهداب وتحديد البناء والهدام.","تفسير نمط حيود أو تداخل من صورة/تجربة وتحديد العوامل المؤثرة."],"13":[["نوعا الشحنة؟","المتشابهة؟","المختلفة؟"],["موجبة وسالبة","تتنافر","تتجاذب"],["شحنتان موجبتان؟","موجبة وسالبة؟","ما الجسيم المنتقل غالبًا؟"],["تتنافران","تتجاذبان","الإلكترون"],"نشاط دلك بالون وتفسير التجاذب.","تفسير تطبيق للكهرباء الساكنة واقتراح استفادة أو احتياط آمن."],"14":[["ما قانون كولوم؟","زيادة الشحنتين تؤثر كيف في القوة؟","زيادة المسافة تؤثر كيف؟"],["قوة بين الشحنات","تزيد","تقل"],["إذا تضاعفت إحدى الشحنتين فالقوة؟","إذا زادت المسافة فالقوة؟","القوة كمية متجهة؟"],["تتضاعف","تقل","نعم"],"حل مسائل مباشرة متدرجة على قانون كولوم.","مقارنة حالتين لقوة كهربائية واستنتاج أثر الشحنة والمسافة."],"15":[["ما المجال الكهربائي؟","اتجاهه حول شحنة موجبة؟","وحدة شدة المجال؟"],["منطقة تأثير القوة","إلى الخارج","N/C"],["اتجاهه حول سالبة؟","كيف نمثل المجال؟","أين يكون أقوى؟"],["إلى الداخل","بخطوط المجال","حيث تتقارب الخطوط"],"رسم خطوط مجال لشحنة موجبة وسالبة.","رسم ومقارنة مجال حالتين وتفسير مناطق القوة والضعف."],"16":[["ما فرق الجهد؟","ما المكثف؟","ما وظيفة المجال في تطبيقاته؟"],["الشغل لكل شحنة","جهاز يخزن شحنة/طاقة","التأثير في الشحنات"],["اذكري تطبيقًا للمجال الكهربائي.","ماذا يخزن المكثف؟","هل فرق الجهد كمية قياسية؟"],["الطابعة/المرسب/المكثف","طاقة كهربائية","نعم"],"مطابقة تطبيقات المجالات بوظائفها.","اختيار تطبيق للمجال الكهربائي وشرح آلية عمله في مخطط."],"17":[["حددي مفهومًا يحتاج مراجعة من الفصول السابقة.","اكتبي قانونًا فيزيائيًا درستِه.","اذكري تطبيقًا حياتيًا لمفهوم فيزيائي."],["بحسب إجابة الطالبة","بحسب القانون الصحيح","بحسب التطبيق الصحيح"],["صححي المفهوم الذي أخطأتِ فيه.","طبقي قانونًا على مثال بسيط.","فسري تطبيقًا حياتيًا تفسيرًا علميًا."],["بحسب الأداء الصحيح","بحسب الحل","بحسب التفسير"],"مراجعة أخطاء شائعة بخريطة مفاهيم وأسئلة قصيرة.","إنشاء سؤال تحصيلي مع أربعة بدائل وتفسير الإجابة الصحيحة."],"18":[["سؤال شفهي من مهارة أساسية.","تحديد أداة/خطوة في تجربة.","توقع نتيجة تجربة بسيطة."],["وفق المهارة","وفق التجربة","وفق المبدأ"],["إعادة السؤال الشفهي بصياغة مكافئة.","تنفيذ خطوة عملية صحيحة.","تفسير النتيجة عمليًا."],["وفق المهارة","وفق الأداء","وفق التفسير"],"تدريب مصغر على مهارات الاختبار الشفهي والعملي.","تصميم تجربة قصيرة وتحديد المتغيرات والنتيجة المتوقعة."],"19":[["سؤال مفاهيمي شامل.","سؤال قانوني قصير.","سؤال تفسير تطبيق."],["وفق المنهج","وفق القانون","وفق المفهوم"],["سؤال مكافئ للمفهوم.","مسألة مكافئة.","تفسير موقف جديد."],["وفق المنهج","وفق الحل","وفق التفسير"],"مراجعة مركزة حسب الأخطاء في القياس القبلي.","حل تحدٍ تحصيلي مركب وتبرير خطوات الحل."]};
+const PLAN_DEFAULTS={"1": ["تشخيص المفاهيم السابقة المرتبطة بحالات المادة والضغط والكثافة، ثم إعادة شرح خصائص الموائع باستخدام أمثلة حياتية وخريطة مفاهيم قصيرة، يليها تدريب متدرج مع تغذية راجعة فورية.", "مهمة استقصائية: مقارنة سلوك عدة موائع في مواقف حياتية، ثم تفسير الاختلاف في خصائصها وربطها بتطبيقات هندسية أو طبية."], "2": ["خطة علاجية جاهزة للأسبوع 2: تشخيص المهارة غير المتقنة، شرح مركز وتمثيل بصري، تدريب موجه ثم مستقل، وتغذية راجعة فورية وفق موضوع الأسبوع.", "خطة إثرائية جاهزة للأسبوع 2: تحدٍ تطبيقي أو تجربة/استقصاء قصير مرتبط بموضوع الأسبوع، يتبعه سؤال تفكير أعلى أو تحصيلي مع تبرير الإجابة."], "3": ["خطة علاجية جاهزة للأسبوع 3: تشخيص المهارة غير المتقنة، شرح مركز وتمثيل بصري، تدريب موجه ثم مستقل، وتغذية راجعة فورية وفق موضوع الأسبوع.", "خطة إثرائية جاهزة للأسبوع 3: تحدٍ تطبيقي أو تجربة/استقصاء قصير مرتبط بموضوع الأسبوع، يتبعه سؤال تفكير أعلى أو تحصيلي مع تبرير الإجابة."], "4": ["تبسيط مفهوم الحركة الدورية وخصائص الموجات باستخدام تمثيل بصري ومواقف مألوفة، ثم تدريب على تحديد السعة والطول الموجي والتردد والزمن الدوري.", "نشاط إثرائي: تحليل موجة مرسومة واستخراج خصائصها، ثم استنتاج أثر تغيير التردد أو الطول الموجي مع تبرير الإجابة."], "5": ["خطة علاجية جاهزة للأسبوع 5: تشخيص المهارة غير المتقنة، شرح مركز وتمثيل بصري، تدريب موجه ثم مستقل، وتغذية راجعة فورية وفق موضوع الأسبوع.", "خطة إثرائية جاهزة للأسبوع 5: تحدٍ تطبيقي أو تجربة/استقصاء قصير مرتبط بموضوع الأسبوع، يتبعه سؤال تفكير أعلى أو تحصيلي مع تبرير الإجابة."], "6": ["إعادة بناء مفاهيم الصوت وخصائصه والرنين باستخدام أمثلة سمعية ورسوم مبسطة، ثم تدريب على العلاقة بين التردد ودرجة الصوت والرنين.", "استقصاء تطبيقي عن الرنين في الأعمدة الهوائية أو الأوتار، مع تفسير كيفية تغير النغمة عند تغيير الطول أو الشد وربط ذلك بآلة موسيقية."], "7": ["خطة علاجية جاهزة للأسبوع 7: تشخيص المهارة غير المتقنة، شرح مركز وتمثيل بصري، تدريب موجه ثم مستقل، وتغذية راجعة فورية وفق موضوع الأسبوع.", "خطة إثرائية جاهزة للأسبوع 7: تحدٍ تطبيقي أو تجربة/استقصاء قصير مرتبط بموضوع الأسبوع، يتبعه سؤال تفكير أعلى أو تحصيلي مع تبرير الإجابة."], "8": ["خطة علاجية جاهزة للأسبوع 8: تشخيص المهارة غير المتقنة، شرح مركز وتمثيل بصري، تدريب موجه ثم مستقل، وتغذية راجعة فورية وفق موضوع الأسبوع.", "خطة إثرائية جاهزة للأسبوع 8: تحدٍ تطبيقي أو تجربة/استقصاء قصير مرتبط بموضوع الأسبوع، يتبعه سؤال تفكير أعلى أو تحصيلي مع تبرير الإجابة."], "9": ["معالجة أخطاء رسم الأشعة وتحديد الصور في المرايا المستوية والكروية باستخدام خطوات ثابتة ونماذج مرسومة ثم تدريب فردي قصير.", "تحدي بصري: تحليل تكوّن الصور في مرايا مختلفة وتحديد صفاتها، ثم تطبيق المفهوم على أداة أو موقف من الحياة اليومية."], "10": ["خطة علاجية جاهزة للأسبوع 10: تشخيص المهارة غير المتقنة، شرح مركز وتمثيل بصري، تدريب موجه ثم مستقل، وتغذية راجعة فورية وفق موضوع الأسبوع.", "خطة إثرائية جاهزة للأسبوع 10: تحدٍ تطبيقي أو تجربة/استقصاء قصير مرتبط بموضوع الأسبوع، يتبعه سؤال تفكير أعلى أو تحصيلي مع تبرير الإجابة."], "11": ["خطة علاجية جاهزة للأسبوع 11: تشخيص المهارة غير المتقنة، شرح مركز وتمثيل بصري، تدريب موجه ثم مستقل، وتغذية راجعة فورية وفق موضوع الأسبوع.", "خطة إثرائية جاهزة للأسبوع 11: تحدٍ تطبيقي أو تجربة/استقصاء قصير مرتبط بموضوع الأسبوع، يتبعه سؤال تفكير أعلى أو تحصيلي مع تبرير الإجابة."], "12": ["خطة علاجية جاهزة للأسبوع 12: تشخيص المهارة غير المتقنة، شرح مركز وتمثيل بصري، تدريب موجه ثم مستقل، وتغذية راجعة فورية وفق موضوع الأسبوع.", "خطة إثرائية جاهزة للأسبوع 12: تحدٍ تطبيقي أو تجربة/استقصاء قصير مرتبط بموضوع الأسبوع، يتبعه سؤال تفكير أعلى أو تحصيلي مع تبرير الإجابة."], "13": ["معالجة مفهوم الشحنة الكهربائية وطرق انتقالها باستخدام أمثلة محسوسة ومخطط يوضح التجاذب والتنافر، ثم أسئلة قصيرة متدرجة.", "نشاط استقصائي عن الكهرباء الساكنة في الحياة اليومية، مع تفسير الظاهرة واقتراح طريقة آمنة لتقليل أثرها أو الاستفادة منها."], "14": ["خطة علاجية جاهزة للأسبوع 14: تشخيص المهارة غير المتقنة، شرح مركز وتمثيل بصري، تدريب موجه ثم مستقل، وتغذية راجعة فورية وفق موضوع الأسبوع.", "خطة إثرائية جاهزة للأسبوع 14: تحدٍ تطبيقي أو تجربة/استقصاء قصير مرتبط بموضوع الأسبوع، يتبعه سؤال تفكير أعلى أو تحصيلي مع تبرير الإجابة."], "15": ["معالجة مفهوم المجال الكهربائي وتمثيله وقياسه باستخدام رسوم خطوط المجال وأمثلة تدريجية، مع التركيز على الاتجاه وشدة المجال.", "مهمة إثرائية: رسم ومقارنة مجالات كهربائية لحالات مختلفة، ثم تفسير مناطق القوة والضعف وربطها بسلوك شحنة اختبار."], "16": ["خطة علاجية جاهزة للأسبوع 16: تشخيص المهارة غير المتقنة، شرح مركز وتمثيل بصري، تدريب موجه ثم مستقل، وتغذية راجعة فورية وفق موضوع الأسبوع.", "خطة إثرائية جاهزة للأسبوع 16: تحدٍ تطبيقي أو تجربة/استقصاء قصير مرتبط بموضوع الأسبوع، يتبعه سؤال تفكير أعلى أو تحصيلي مع تبرير الإجابة."], "17": ["خطة علاجية جاهزة للأسبوع 17: تشخيص المهارة غير المتقنة، شرح مركز وتمثيل بصري، تدريب موجه ثم مستقل، وتغذية راجعة فورية وفق موضوع الأسبوع.", "خطة إثرائية جاهزة للأسبوع 17: تحدٍ تطبيقي أو تجربة/استقصاء قصير مرتبط بموضوع الأسبوع، يتبعه سؤال تفكير أعلى أو تحصيلي مع تبرير الإجابة."], "18": ["خطة علاجية جاهزة للأسبوع 18: تشخيص المهارة غير المتقنة، شرح مركز وتمثيل بصري، تدريب موجه ثم مستقل، وتغذية راجعة فورية وفق موضوع الأسبوع.", "خطة إثرائية جاهزة للأسبوع 18: تحدٍ تطبيقي أو تجربة/استقصاء قصير مرتبط بموضوع الأسبوع، يتبعه سؤال تفكير أعلى أو تحصيلي مع تبرير الإجابة."], "19": ["خطة علاجية جاهزة للأسبوع 19: تشخيص المهارة غير المتقنة، شرح مركز وتمثيل بصري، تدريب موجه ثم مستقل، وتغذية راجعة فورية وفق موضوع الأسبوع.", "خطة إثرائية جاهزة للأسبوع 19: تحدٍ تطبيقي أو تجربة/استقصاء قصير مرتبط بموضوع الأسبوع، يتبعه سؤال تفكير أعلى أو تحصيلي مع تبرير الإجابة."]}; const DEFAULT_ROSTERS={"1":[],"2":[],"3":[]};
+const LOCAL_KEY='dalalPhysics3_1448_offline_draft_v1';
+const INITIAL_DATA={"globals": {}, "groupPlans": [], "students": [], "rosters": {"1": [], "2": [], "3": []}, "weeks": {"1": {"done": false, "attachments": [], "pre": "اختبار قبلي قصير (3–5 أسئلة) لتحديد المفاهيم والمهارات غير المتقنة.", "remedial": "تشخيص المفاهيم السابقة المرتبطة بحالات المادة والضغط والكثافة، ثم إعادة شرح خصائص الموائع باستخدام أمثلة حياتية وخريطة مفاهيم قصيرة، يليها تدريب متدرج مع تغذية راجعة فورية.", "note": "اختبار الحفظ السحابي", "post": "اختبار بعدي قصير مماثل للقبلي مع مقارنة النتيجة وتسجيل مقدار التحسن.", "enrichment": "مهمة استقصائية: مقارنة سلوك عدة موائع في مواقف حياتية، ثم تفسير الاختلاف في خصائصها وربطها بتطبيقات هندسية أو طبية."}, "2": {"attachments": [], "done": false, "remedial": "إعادة شرح الضغط في السوائل وقاعدة باسكال ومبدأ أرخميدس وتفسير الجريان برسوم مبسطة؛ ثم تدريب متدرج على مقارنة الضغط عند أعماق مختلفة وحل مسائل قصيرة.", "enrichment": "استقصاء تأثير مساحة السطح والعمق في الضغط، ومقارنة تطبيقات مبدأ برنولي في الطيران أو المرشّات مع تفسير علمي.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: القوى داخل السوائل والموائع الساكنة والمتحركة، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "3": {"attachments": [], "done": false, "remedial": "مقارنة ترتيب الجسيمات في المواد الصلبة والسائلة والغازية، وتوضيح التمدد الحراري والمرونة باستخدام أمثلة ورسوم، ثم تدريب تصنيفي وتصحيح الأخطاء.", "enrichment": "تصميم نموذج أو ملصق يفسر التمدد الحراري في الجسور والسكك الحديدية، مع مراجعة تطبيقية تربط حالات المادة بالحياة.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: المواد الصلبة ومراجعة حالات المادة، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "4": {"attachments": [], "done": false, "remedial": "إعادة توضيح السعة والزمن الدوري والتردد والطول الموجي باستخدام بندول ورسوم موجية؛ حل أمثلة بسيطة وقياس قبلي وبعدي.", "enrichment": "استقصاء العلاقة بين التردد والزمن الدوري، وتحليل تمثيل بياني لموجات مختلفة وتبرير النتائج.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: الحركة الدورية وخصائص الموجات، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "5": {"attachments": [], "done": false, "remedial": "تمثيل الانعكاس والانكسار والحيود والتداخل باستخدام حبل أو محاكاة ورسوم؛ تصنيف الظواهر في بطاقات ومراجعة المفاهيم المتشابهة.", "enrichment": "تصميم تجربة أو عرض مقارنة لظاهرتين موجيتين وتفسير ما يتغير عند اختلاف الوسط أو العائق.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: سلوك الموجات ومراجعة، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "6": {"attachments": [], "done": false, "remedial": "التمييز بين حدة الصوت وعلوه والتردد والشدة باستخدام مصادر صوت وأمثلة؛ توضيح الرنين في الأعمدة الهوائية والأوتار ثم تدريب قصير.", "enrichment": "استقصاء تأثير طول الوتر أو العمود الهوائي في التردد والرنين، وتفسير تطبيق في آلة موسيقية.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: خصائص الصوت والرنين، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "7": {"attachments": [], "done": false, "remedial": "توضيح الفرق بين التدفق الضوئي والاستضاءة وشدة الإضاءة، وتطبيق أثر المسافة باستخدام مصدر ضوء وتجارب مقارنة ومسائل متدرجة.", "enrichment": "جمع قراءات استضاءة عند مسافات مختلفة أو محاكاتها، وتمثيل العلاقة بيانيًا وتفسيرها.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: الاستضاءة، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "8": {"attachments": [], "done": false, "remedial": "مراجعة الأدلة على الطبيعة الموجية للضوء والتمييز بين التداخل والحيود والاستقطاب برسوم وتجارب مبسطة وأسئلة مقارنة.", "enrichment": "تحليل تطبيق للاستقطاب أو التداخل في الحياة اليومية وشرح كيفية الاستفادة منه.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: الطبيعة الموجية للضوء ومراجعة، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "9": {"attachments": [], "done": false, "remedial": "تثبيت قانون الانعكاس ورسم العمود المقام وزاويتي السقوط والانعكاس، ثم مقارنة المقعرة والمحدبة وتحديد خصائص الصور بأشعة رئيسية.", "enrichment": "تصميم مسار انعكاس باستخدام مرايا أو محاكاة، وتفسير استخدام المرآة المقعرة والمحدبة في تطبيقات حياتية.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: الانعكاس عن المرايا المستوية والمرايا الكروية، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "10": {"attachments": [], "done": false, "remedial": "توضيح انحراف الشعاع عند انتقاله بين وسطين باستخدام تجربة ماء ورسوم العمود المقام؛ تدريب على اتجاه الانكسار ومعامل الانكسار.", "enrichment": "تحليل ظاهرة القلم في الماء أو الانعكاس الكلي الداخلي، وربطها بتطبيق الألياف الضوئية.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: انكسار الضوء، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "11": {"attachments": [], "done": false, "remedial": "التمييز بين العدسات المجمعة والمفرقة، ورسم الأشعة الرئيسة وتحديد صفات الصور في حالات بسيطة، ثم تدريبات متدرجة.", "enrichment": "تصميم نموذج بصري يوضح دور العدسات في النظارات أو الكاميرا أو المجهر مع تفسير تكوّن الصورة.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: العدسات المحدبة والمقعرة وتطبيقاتها، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "12": {"attachments": [], "done": false, "remedial": "إعادة شرح التداخل البنّاء والهدّام والحيود من خلال رسوم أو محاكاة وتدريب على تمييز الأنماط وتفسيرها.", "enrichment": "استقصاء أثر تغير اتساع الفتحة أو الطول الموجي على نمط الحيود وتقديم الاستنتاج.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: التداخل والحيود، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "13": {"attachments": [], "done": false, "remedial": "التمييز بين الشحنات وطرق الشحن والتجاذب والتنافر والحفظ الكلي للشحنة باستخدام رسوم وتجارب آمنة، وتطبيقات قصيرة.", "enrichment": "تفسير عمل الكشاف الكهربائي أو الكهرباء الساكنة في الحياة اليومية مع تصميم تجربة توضيحية.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: الشحنة الكهربائية، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "14": {"attachments": [], "done": false, "remedial": "إعادة شرح قانون كولوم وتأثير مقدار الشحنات والمسافة، والتدرّب على تحديد اتجاه القوة وحل مسائل بسيطة بوحدات صحيحة.", "enrichment": "مقارنة القوة الكهربائية عند تغيير المسافة والشحنة باستخدام جدول أو رسم بياني وتفسير التناسب.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: القوة الكهربائية، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "15": {"attachments": [], "done": false, "remedial": "تمثيل خطوط المجال الكهربائي واتجاهها، والتمييز بين المجال والقوة والجهد الكهربائي، ثم تدريب على قراءة رسومات المجال.", "enrichment": "إنشاء خريطة لمجال شحنتين أو لوحين باستخدام محاكاة ومناقشة مواضع شدة المجال.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: توليد المجالات الكهربائية وقياسها، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "16": {"attachments": [], "done": false, "remedial": "مراجعة علاقات المجال الكهربائي والجهد، ثم تدريبات تطبيقية وتصحيح المفاهيم الخاطئة بأسئلة متنوعة.", "enrichment": "بحث قصير في تطبيق للمجالات الكهربائية مثل الطباعة الكهروستاتيكية أو المرسبات مع رسم مبدأ العمل.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: تطبيقات المجالات الكهربائية ومراجعة، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "17": {"attachments": [], "done": false, "remedial": "تحديد المفاهيم والمهارات غير المتقنة من نتائج التقويمات، وتنفيذ محطات مراجعة بحسب الاحتياج مع اختبار قصير بعدي.", "enrichment": "إعداد خريطة مفاهيم تربط وحدات الفصل وتصميم أسئلة تحصيلية مع إجابات مفسرة.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: مراجعة عامة، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "18": {"attachments": [], "done": false, "remedial": "مراجعة مهارات أداء التجارب وتفسير النتائج وإعادة تدريب من تحتاج إلى دعم قبل التقييم العملي والشفهي.", "enrichment": "تكليف الطالبات المتقنات بتفسير ظواهر أو تصميم تجربة عملية قصيرة وفق معايير السلامة.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: اختبارات شفهية وعملية، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}, "19": {"attachments": [], "done": false, "remedial": "مراجعة مركزة للمفاهيم والمسائل الأكثر شيوعًا في الأخطاء، مع بنك أسئلة مصغر وتغذية راجعة.", "enrichment": "تحديات مراجعة تكاملية وتفسير حلول متعددة لمسائل تمثل وحدات الفصل.", "pre": "تقويم تشخيصي قصير من 3–5 أسئلة حول: اختبارات نهائية، مع تسجيل المهارات غير المتقنة.", "post": "تقويم بعدي مكافئ للقبلي، ومقارنة الدرجات وتوثيق أثر المعالجة والإثراء.", "note": "خطة مقترحة أُعيد إعدادها من توزيع المنهج؛ تُعدّل وفق نتائج طالبات الشعبة، ولم يُوثّق تنفيذها بعد."}}};
+let data;try{data=JSON.parse(localStorage.getItem(LOCAL_KEY)||'null')||INITIAL_DATA}catch(e){data=INITIAL_DATA}
+if(!data.weeks)data.weeks={};if(!data.students)data.students=[];if(!data.globals)data.globals={};if(!data.rosters)data.rosters=JSON.parse(JSON.stringify(DEFAULT_ROSTERS));
+// Personal-name legacy migrations removed from the public site build; authoritative rosters load from authenticated Firestore.
+function selectSemester(n){
+ const second=n===2;
+ document.body.classList.toggle('semester-two',second);
+ const a=document.getElementById('semesterOneBtn'),b=document.getElementById('semesterTwoBtn');
+ a.classList.toggle('active',!second);b.classList.toggle('active',second);
+ a.setAttribute('aria-pressed',String(!second));b.setAttribute('aria-pressed',String(second));
+ document.getElementById('progressBar').style.visibility=second?'hidden':'visible';
+ if(!second)showPage('home');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+let activeSection='1',currentPage=0;const pageOrder=['home','distribution','plans','students','evidence','impact','grades','summary'];
+const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');function persist(){
+ try{localStorage.setItem(LOCAL_KEY,JSON.stringify(data));updateStats();cloudSave()}
+ catch(e){alert('تعذّر الحفظ المحلي! نزّلي نسخة احتياطية فورًا. '+e.message)}
+}
+function showPage(id){currentPage=pageOrder.indexOf(id);document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===id));progressBar.style.width=((currentPage+1)/pageOrder.length*100)+'%';prevBtn.disabled=currentPage===0;nextBtn.disabled=currentPage===pageOrder.length-1;window.scrollTo({top:0,behavior:'smooth'})}document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>showPage(b.dataset.page));function movePage(d){let n=Math.max(0,Math.min(pageOrder.length-1,currentPage+d));showPage(pageOrder[n])}
+function weekAttachments(w){data.weeks[w]=data.weeks[w]||{};data.weeks[w].attachments=data.weeks[w].attachments||[];return data.weeks[w].attachments}
+function renderWeeks(){weeks.innerHTML=dist.map(([w,t])=>{let d=data.weeks[w]||{},df=PLAN_DEFAULTS[w]||['',''];let rem=d.remedial??df[0],enr=d.enrichment??df[1],pre=d.pre??'اختبار قبلي قصير (3–5 أسئلة) لتحديد المفاهيم والمهارات غير المتقنة.',post=d.post??'اختبار بعدي قصير مماثل للقبلي مع مقارنة النتيجة وتسجيل مقدار التحسن.';return `<div class="card week ${d.done?'done':''}"><span class="badge">الأسبوع ${w}</span><h3>${esc(t)}</h3><label>🩺 الخطة العلاجية</label><textarea data-w="${w}" data-k="remedial">${esc(rem)}</textarea><label>⭐ الخطة الإثرائية</label><textarea data-w="${w}" data-k="enrichment">${esc(enr)}</textarea><div class="row"><div><label>القياس القبلي / التشخيص</label><textarea data-w="${w}" data-k="pre">${esc(pre)}</textarea></div><div><label>القياس البعدي / قياس الأثر</label><textarea data-w="${w}" data-k="post">${esc(post)}</textarea></div></div><label>ملاحظات المعلمة</label><textarea data-w="${w}" data-k="note">${esc(d.note||'')}</textarea><div class="week-files"><b>📎 مرفقات الأسبوع — ارفعي الشاهد مرة واحدة فقط</b><div class="teacher-only block"><div class="row"><select id="type${w}"><option>صورة تنفيذ</option><option>اختبار قبلي</option><option>اختبار بعدي</option><option>ورقة عمل</option><option>نشاط علاجي</option><option>نشاط إثرائي</option><option>قياس أثر</option><option>مرفق إضافي</option></select><input id="title${w}" placeholder="وصف مختصر للشاهد"></div><input id="file${w}" type="file" accept="image/*,.pdf" multiple><div class="actions"><button class="btn attach-btn" onclick="openOriginalEvidence()">🔗 رفع الشاهد في موقع Netlify الأصلي</button></div></div><div class="evidence-grid">${renderWeekEvidence(w)}</div></div><div class="actions"><button class="btn save" data-save-week="${w}" type="button">💾 حفظ الأسبوع</button><span id="weekSaveStatus${w}" class="small" role="status" aria-live="polite">جاهز للحفظ</span><button class="btn" onclick="toggleDone('${w}')">${d.done?'✓ تم التنفيذ':'☐ تعليم كمنفذ'}</button></div></div>`}).join('')}
+function renderWeekEvidence(w){return weekAttachments(w).map((e,i)=>`<div class="ev-card">${e.url&&e.mime?.startsWith('image/')?`<a href="${esc(e.url)}" target="_blank"><img src="${esc(e.url)}"></a>`:''}<b>${esc(e.type)}</b><div class="small">${esc(e.title||e.name)}</div>${e.blobKey||e.url?`<button class="btn" onclick="openOriginalEvidence()">🔗 فتح الشاهد من Netlify</button>`:''}<div class="teacher-only"><button class="btn danger" onclick="openOriginalEvidence()">إدارة الشاهد في Netlify</button></div></div>`).join('')||'<span class="small">لا توجد مرفقات بعد.</span>'}
+// Week save uses a delegated listener, independent of inline onclick handlers.
+// Preserve the editable form until a verified local write and cloud confirmation.
+// Retain period grades stored on server during every whole-file update.
+// Never allow older offline copies to erase the cloud period-grade snapshot.
+function preserveCloudPeriodFields(payload, server){
+ for(const field of ['periodGrades1448','periodGradesRevision1448','periodGradesUpdatedAt1448']){
+  if(server && Object.prototype.hasOwnProperty.call(server,field))payload[field]=server[field];
+  else delete payload[field];
+ }
+}
+async function saveWeek(w, opts={}){
+ const quiet=!!opts.quiet;
+ const button=document.querySelector(`[data-save-week="${w}"]`);
+ const status=document.getElementById('weekSaveStatus'+w);
+ if(button&&button.disabled)return false;
+ if(status)status.textContent='⏳ جارٍ حفظ الأسبوع سحابيًا…';
+ if(button){button.disabled=true;button.textContent='⏳ جارٍ حفظ الأسبوع…';}
+ try{
+  if(!authorized()||!cloudEnabled)throw Error('يرجى تسجيل دخول المعلمة وانتظار اكتمال تحميل بيانات السحابة');
+  if(cloudBusy)throw Error('المزامنة السحابية جارية؛ انتظري قليلًا ثم أعيدي المحاولة');
+  const draft=JSON.parse(JSON.stringify(data));
+  draft.weeks[w]=draft.weeks[w]||{};
+  document.querySelectorAll(`[data-w="${w}"]`).forEach(el=>{draft.weeks[w][el.dataset.k]=el.value});
+  const current=await CLOUD_DOC.get({source:'server'});
+  if(!current.exists||current.data()._dalalRevision!==cloudRevision)throw Error('تغيّرت بيانات السحابة؛ أعيدي تحميلها قبل الحفظ لحماية الشواهد');
+  if((current.data().students||[]).length>(draft.students||[]).length||(current.data().groupPlans||[]).length>(draft.groupPlans||[]).length)throw Error('بيانات الجهاز أقل من السحابة؛ تم إيقاف الحفظ حمايةً لها');
+  const next='r'+Date.now()+'_'+Math.random().toString(36).slice(2);
+  const payload=JSON.parse(JSON.stringify(draft));payload._dalalRevision=next;
+  cloudBusy=true;
+  clearTimeout(cloudTimer);
+  try{
+   await fbDb.runTransaction(async tx=>{
+    const snap=await tx.get(CLOUD_DOC);
+    if(!snap.exists||snap.data()._dalalRevision!==cloudRevision)throw Error('تغيّرت نسخة السحابة أثناء الحفظ');
+    preserveCloudPeriodFields(payload,snap.data());tx.set(CLOUD_DOC,payload);
+   });
+   cloudRevision=next;
+   data=draft;
+   try{localStorage.setItem(LOCAL_KEY,JSON.stringify(data))}catch(localError){cloudStatusText('تم الحفظ سحابيًا، وتعذّر تحديث نسخة الجهاز: '+localError.message)}
+   const verified=await CLOUD_DOC.get({source:'server'});
+   if(!verified.exists||verified.data()._dalalRevision!==next)throw Error('لم يكتمل التحقق من حفظ السحابة؛ أعيدي فتح الأسبوع للتحقق');
+   cloudStatusText('✅ تم حفظ الأسبوع '+w+' سحابيًا والتحقق منه');
+   if(status)status.textContent='✅ تم الحفظ السحابي والتحقق منه';
+   if(!quiet)alert('✅ تم حفظ الأسبوع '+w+' في السحابة والتحقق منه بنجاح');
+   renderWeeks();updateStats();
+   return true;
+  }finally{cloudBusy=false}
+ }catch(err){
+   // Store an isolated emergency draft; never overwrite cloud or the canonical local copy.
+   try{
+     const values={};
+     document.querySelectorAll(`[data-w="${w}"]`).forEach(el=>{values[el.dataset.k]=el.value});
+     localStorage.setItem(LOCAL_KEY+'_week_draft_'+w,JSON.stringify({savedAt:new Date().toISOString(),week:w,values}));
+   }catch(draftError){}
+  cloudStatusText('⚠️ تعذّر حفظ الأسبوع '+w+': '+err.message);
+   if(status)status.textContent='⚠️ لم يتم الحفظ السحابي؛ احتفظي بالصفحة مفتوحة. '+err.message;
+  if(!quiet)alert('تعذّر حفظ الأسبوع '+w+': '+err.message+'\nلم نحذف أي شاهد.');
+  return false;
+ }finally{if(button&&document.body.contains(button)){button.disabled=false;button.textContent='💾 حفظ الأسبوع'}}
+}
+// Do not mark a week complete when the preceding save fails.
+async function toggleDone(w){
+ const ok=await saveWeek(w,{quiet:true});
+ if(!ok){alert('لم تتغير حالة التنفيذ؛ احفظي الأسبوع أولًا');return}
+ data.weeks[w].done=!data.weeks[w].done;
+ persist();renderWeeks();
+}
+document.getElementById('weeks').addEventListener('click',function(event){
+ const button=event.target.closest('button[data-save-week]');
+ if(!button)return;
+ event.preventDefault();
+ saveWeek(button.dataset.saveWeek);
+});
+const EVIDENCE_SITE='https://reliable-boba-6c1eba.netlify.app/';
+function openOriginalEvidence(){
+ if(!authorized()){alert('سجّلي دخول المعلمة أولًا. افتحي موقع الشواهد الأصلي من الرابط بعد تسجيل الدخول.');return;}
+ if(confirm('الشواهد مرفوعة على Netlify وليست على GitHub. افتحي موقع Netlify الأصلي لإدارة الشواهد؟'))window.open(EVIDENCE_SITE,'_blank','noopener,noreferrer');
+}
+async function evidenceRequest(){throw Error('خدمة الشواهد خاصة بموقع Netlify الأصلي. افتحي الموقع الأصلي لإدارة المرفقات.');}
+async function openSecureEvidence(w,i){
+ const e=weekAttachments(w)[i];if(!e)return;
+ if(e.blobKey){
+  try{
+   const res=await evidenceRequest('GET',e.blobKey);
+   const file=await res.blob(),url=URL.createObjectURL(file);
+   const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';
+   a.download=e.name||'شاهد';document.body.appendChild(a);a.click();a.remove();
+   setTimeout(()=>URL.revokeObjectURL(url),60000);
+  }catch(err){alert('تعذر فتح الشاهد: '+err.message)}
+ }else if(e.url){const a=document.createElement('a');a.href=e.url;a.target='_blank';a.rel='noopener noreferrer';a.click()}
+}
+async function uploadEvidence(w){
+ if(!authorized()){alert('سجّلي دخول المعلمة أولًا');return}
+ if(!cloudEnabled||cloudBusy){alert('انتظري اكتمال مزامنة السحابة بعد تسجيل الدخول.');return}
+ const field=document.getElementById('file'+w),files=Array.from(field?.files||[]);
+ if(!files.length){alert('اختاري صورة أو PDF أولًا');return}
+ const allowed=['application/pdf','image/jpeg','image/png','image/webp','image/heic','image/heif'];
+ if(files.some(f=>f.size>4*1024*1024||f.size<=0||!(allowed.includes(f.type)))){
+  alert('اختاري PDF أو صورة بحجم لا يتجاوز 4 ميجابايت للملف.');return
+ }
+ const btn=field.closest('.week-files').querySelector('.attach-btn');
+ btn.disabled=true;btn.textContent='جارٍ رفع الشاهد…';
+ let success=0,fail=0;
+ try{
+  // Flush any unsaved week textarea edits before updating the attachments index.
+  data.weeks[w]=data.weeks[w]||{};
+  document.querySelectorAll(`[data-w="${w}"]`).forEach(el=>data.weeks[w][el.dataset.k]=el.value);
+  for(const f of files){
+   try{
+    const body=new FormData();body.append('file',f);body.append('week',w);
+    const res=await evidenceRequest('POST',body);
+    const info=await res.json();
+    const record={type:document.getElementById('type'+w).value,
+      title:document.getElementById('title'+w).value,name:f.name,mime:f.type,
+      blobKey:info.key,kind:f.type==='application/pdf'?'pdf':'image',createdAt:new Date().toISOString()};
+    weekAttachments(w).push(record);
+    try{
+      const snap=await CLOUD_DOC.get({source:'server'});
+      const old=snap.data();
+      if(!snap.exists||old._dalalRevision!==cloudRevision)throw Error('بيانات السحابة تغيرت؛ لا نريد استبدالها');
+      const next='r'+Date.now()+'_'+Math.random().toString(36).slice(2);
+      const payload=JSON.parse(JSON.stringify(data));payload._dalalRevision=next;
+      await fbDb.runTransaction(async tx=>{
+        const current=await tx.get(CLOUD_DOC);
+        if(!current.exists||current.data()._dalalRevision!==cloudRevision)throw Error('تغيرت السحابة');
+        preserveCloudPeriodFields(payload,current.data());tx.set(CLOUD_DOC,payload);
+      });
+      cloudRevision=next;
+      localStorage.setItem(LOCAL_KEY,JSON.stringify(data));success++;
+    }catch(err){
+      weekAttachments(w).pop();
+      try{await evidenceRequest('DELETE',info.key)}catch{}
+      fail++;
+      alert('تم إلغاء إضافة الشاهد بسبب تعذر حفظ سجله سحابيًا: '+err.message);
+    }
+   }catch(err){fail++;alert('تعذر رفع '+f.name+': '+err.message)}
+  }
+  renderWeeks();renderEvidence();updateStats();
+  if(success)alert(`تم حفظ ${success} شاهد في التخزين السحابي ✅${fail?' وتعذر '+fail:''}`);
+ }finally{if(document.body.contains(btn)){btn.disabled=false;btn.textContent='🔗 رفع الشاهد في موقع Netlify الأصلي'}}
+}
+async function deleteEvidence(w,i){
+ if(!authorized()||!cloudEnabled){alert('سجلي دخول المعلمة وفعلي الحفظ السحابي');return}
+ if(!confirm('هل تريدين حذف الشاهد نهائيًا؟'))return;
+ const record=weekAttachments(w)[i];if(!record)return;
+ const oldList=weekAttachments(w).slice();
+ data.weeks[w].attachments=oldList.filter((_,j)=>j!==i);
+ try{
+  if(cloudBusy)throw Error('هناك عملية حفظ جارية؛ أعيدي المحاولة بعد اكتمالها');
+  cloudBusy=true;
+  const next='r'+Date.now()+'_'+Math.random().toString(36).slice(2);
+  await fbDb.runTransaction(async tx=>{
+    const snap=await tx.get(CLOUD_DOC);
+    if(!snap.exists||snap.data()._dalalRevision!==cloudRevision)throw Error('بيانات السحابة تغيّرت');
+    const payload=JSON.parse(JSON.stringify(data));payload._dalalRevision=next;
+    preserveCloudPeriodFields(payload,snap.data());tx.set(CLOUD_DOC,payload);
+  });
+  cloudRevision=next;
+  localStorage.setItem(LOCAL_KEY,JSON.stringify(data));
+  renderWeeks();renderEvidence();updateStats();
+  if(record.blobKey){try{await evidenceRequest('DELETE',record.blobKey)}catch(err){alert('حُذف من السجل، لكن تعذّر حذف الملف من التخزين: '+err.message)}}
+ }catch(err){data.weeks[w].attachments=oldList;alert('لم يُحذف الشاهد: '+err.message)}
+ finally{cloudBusy=false;}
+}
+function allEvidence(){let a=[];dist.forEach(([w,t])=>weekAttachments(w).forEach((e,i)=>a.push({...e,w,topic:t,i})));return a}
+function openEvidenceUrl(url,mime,name){
+  if(!url)return;
+  const isPdf=(mime==='application/pdf'||/\.pdf($|\?)/i.test(url)||/\.pdf$/i.test(name||''));
+  if(isPdf){
+    const a=document.createElement('a');
+    a.href=url;
+    a.target='_blank';
+    a.rel='noopener';
+    a.click();
+    return;
+  }
+  window.open(url,'_blank','noopener');
+}
+
+function renderEvidence(){const wf=evWeekFilter.value,tf=evTypeFilter.value;let a=allEvidence().filter(e=>(!wf||e.w===wf)&&(!tf||e.type===tf));evidenceList.innerHTML=a.map(e=>`<div class="ev-card">${e.url&&e.mime?.startsWith('image/')?`<a href="${esc(e.url)}" target="_blank"><img src="${esc(e.url)}"></a>`:''}<span class="badge">الأسبوع ${e.w}</span><h4>${esc(e.type)}</h4><div>${esc(e.title||e.name)}</div><div class="small">${esc(e.topic)}</div>${e.blobKey||e.url?`<button class="btn" onclick="openSecureEvidence('${e.w}',${e.i})">🔗 فتح الشاهد من Netlify</button>`:''}<div class="teacher-only"><button class="btn danger" onclick="deleteEvidence('${e.w}',${e.i})">إدارة الشاهد في Netlify</button></div></div>`).join('')||'<p class="small">لا توجد شواهد مطابقة.</p>'}
+
+function initGroupWeek(){
+ if(!window.groupWeek)return;
+ groupWeek.innerHTML=dist.map(x=>`<option value="${x[0]}">الأسبوع ${x[0]} — ${esc(x[1])}</option>`).join('');
+ loadReadyAssessment()
+}
+
+function toggleGroupScores(){
+  const block=document.getElementById('groupScoresBlock');
+  if(block) block.style.display=(window.groupType && groupType.value==='إثرائية')?'none':'block';
+}
+
+function loadReadyAssessment(){
+ if(!window.groupWeek||!window.readyAssessment)return;
+ const w=groupWeek.value||'1', a=READY_ASSESSMENTS[w], topic=(dist.find(x=>x[0]===w)||[])[1]||'';
+ if(!groupSkill.value||groupSkill.dataset.auto==='1'){groupSkill.value=topic;groupSkill.dataset.auto='1'}
+ groupSkill.oninput=()=>groupSkill.dataset.auto='0';
+ if(!a)return;
+ toggleGroupScores();
+ if(groupType.value==='إثرائية'){
+   readyAssessment.innerHTML=`<h4>⭐ المهمة الإثرائية الجاهزة — مرة واحدة للمجموعة</h4><div class="enrich-box">${esc(a[5])}</div><p class="small">اختاري الطالبات المتقنات مرة واحدة، نفذي المهمة كمجموعة، ويكفي شاهد واحد أو نماذج مختارة من العمل.</p>`;
+ }else{
+   const q=(arr,ans,title)=>`<h4>${title}</h4>`+arr.map((x,i)=>`<div class="qcard"><b>${i+1}- ${esc(x)}</b><div class="answer">🔑 الإجابة: ${esc(ans[i])}</div></div>`).join('');
+   readyAssessment.innerHTML=q(a[0],a[1],'📝 القياس القبلي — 3 أسئلة')+
+   `<h4>🎯 النشاط العلاجي المقترح</h4><div class="qcard">${esc(a[4])}</div>`+
+   q(a[2],a[3],'📝 القياس البعدي — 3 أسئلة مكافئة')+
+   `<div class="score-guide">📊 التحويل للنسبة: 0/3 = 0% • 1/3 = 33% • 2/3 = 67% • 3/3 = 100%</div>`;
+ }
+}
+
+function setSection(s,b){
+ activeSection=s;document.querySelectorAll('#sectionTabs button').forEach(x=>x.classList.remove('active'));if(b)b.classList.add('active');
+ renderRoster();renderGroupPlans()
+}
+function selectedStudentNames(){return [...document.querySelectorAll('.student-pick:checked')].map(x=>x.value)}
+function renderRoster(){
+ let q=studentSearch.value.trim(),all=data.rosters[activeSection]||[],names=all.filter(n=>!q||n.includes(q));
+ sectionSummary.textContent=`عدد طالبات الشعبة: ${all.length} • المحددات الآن: ${selectedStudentNames().length}`;
+ rosterList.innerHTML=names.map(n=>{
+   let rs=data.students.filter(x=>x.name===n&&String(x.cls)===activeSection),r=rs[rs.length-1];
+   return `<div class="student-card"><input class="student-pick teacher-only" type="checkbox" value="${esc(n)}" onchange="renderSelectedScores()"><b>${esc(n)}</b><span>${r?esc(r.type):'بدون خطة'}</span><span>${r&&r.post!==''&&r.post!=null?`${r.pre||'—'} ← ${r.post}`:(r?`قبلي ${r.pre||'—'}`:'—')}</span></div>`
+ }).join('')+`</div>`;
+ renderSelectedScores()
+}
+function selectVisibleStudents(on){document.querySelectorAll('.student-pick').forEach(x=>x.checked=on);renderSelectedScores()}
+function renderSelectedScores(prefill={}){
+ const names=selectedStudentNames();
+ sectionSummary.textContent=`عدد طالبات الشعبة: ${(data.rosters[activeSection]||[]).length} • المحددات الآن: ${names.length}`;
+
+ if(groupType.value==='إثرائية'){
+   selectedScores.innerHTML=names.length
+     ? `<h4>الطالبات المختارات (${names.length})</h4>`+
+       names.map(n=>`<div class="score-row selected-member" data-student="${esc(n)}"><b>${esc(n)}</b><span class="small">⭐ ضمن المجموعة الإثرائية</span></div>`).join('')
+     : '<p class="small">حددي الطالبات من القائمة أعلاه أولًا.</p>';
+   return;
+ }
+
+ selectedScores.innerHTML=names.length?`<h4>درجات المجموعة (${names.length})</h4>`+names.map(n=>{
+   let v=prefill[n]||{};
+   return `<div class="score-row" data-student="${esc(n)}"><b>${esc(n)}</b><input class="gpre" type="number" min="0" max="100" placeholder="قبلي %" value="${esc(v.pre??'')}"><input class="gpost" type="number" min="0" max="100" placeholder="بعدي %" value="${esc(v.post??'')}"><span class="small growth">${v.pre!==''&&v.post!==''&&v.pre!=null&&v.post!=null?'التحسن '+((+v.post)-(+v.pre)).toFixed(0)+'%':'البعدي لاحقًا'}</span></div>`
+ }).join(''):'<p class="small">حددي الطالبات من القائمة أعلاه أولًا.</p>';
+ document.querySelectorAll('#selectedScores input').forEach(x=>x.oninput=()=>{let r=x.closest('.score-row'),a=r.querySelector('.gpre').value,b=r.querySelector('.gpost').value;r.querySelector('.growth').textContent=(a!==''&&b!=='')?'التحسن '+(+b-+a).toFixed(0)+'%':'البعدي لاحقًا'})
+}
+function saveGroupPlan(){
+ const names=selectedStudentNames();
+ if(!names.length){alert('حددي طالبة واحدة على الأقل');return}
+ if(!groupSkill.value.trim()){alert('اكتبي الدرس أو المهارة');return}
+
+ const groupId=window.editingGroupId||('g'+Date.now()),now=new Date().toISOString();
+
+ names.forEach(name=>{
+   let pre='',post='';
+   if(groupType.value!=='إثرائية'){
+     const r=[...document.querySelectorAll('#selectedScores .score-row')].find(x=>x.dataset.student===name);
+     if(r){pre=r.querySelector('.gpre')?.value||'';post=r.querySelector('.gpost')?.value||''}
+   }
+   let old=data.students.find(x=>x.groupId===groupId&&x.name===name);
+   let rec={name,cls:activeSection,skill:groupSkill.value.trim(),type:groupType.value,pre,post,note:groupNote.value,groupId,updatedAt:now};
+   if(old)Object.assign(old,rec);else data.students.push(rec)
+ });
+
+ let meta={id:groupId,cls:activeSection,week:groupWeek.value,skill:groupSkill.value.trim(),type:groupType.value,note:groupNote.value,names,updatedAt:now};
+ let gi=data.groupPlans.findIndex(x=>x.id===groupId);if(gi>=0)data.groupPlans[gi]=meta;else data.groupPlans.push(meta);
+ window.editingGroupId=null;persist();renderRoster();renderGroupPlans();alert('تم تسجيل المجموعة على الجهاز. تأكدي من ظهور رسالة نجاح الحفظ السحابي قبل إغلاق الصفحة.')
+}
+function editGroupPlan(id){
+ data.groupPlans=data.groupPlans||[];let gp=data.groupPlans.find(x=>x.id===id);if(!gp)return;
+ activeSection=String(gp.cls);document.querySelectorAll('#sectionTabs button').forEach((b,i)=>b.classList.toggle('active',String(i+1)===activeSection));renderRoster();
+ groupWeek.value=gp.week||'1';groupSkill.value=gp.skill;groupSkill.dataset.auto='0';groupType.value=gp.type;groupNote.value=gp.note||'';loadReadyAssessment();window.editingGroupId=id;
+ document.querySelectorAll('.student-pick').forEach(x=>x.checked=gp.names.includes(x.value));
+ let pf={};data.students.filter(x=>x.groupId===id).forEach(x=>pf[x.name]={pre:x.pre,post:x.post});renderSelectedScores(pf);
+ document.getElementById('groupSkill').scrollIntoView({behavior:'smooth',block:'center'})
+}
+function deleteGroupPlan(id){
+ if(!confirm('حذف خطة المجموعة وسجلاتها؟'))return;
+ data.groupPlans=(data.groupPlans||[]).filter(x=>x.id!==id);data.students=data.students.filter(x=>x.groupId!==id);persist();renderRoster();renderGroupPlans();calcImpact()
+}
+function renderGroupPlans(){
+ data.groupPlans=data.groupPlans||[];
+ let a=data.groupPlans.filter(x=>String(x.cls)===activeSection).slice().reverse();
+ groupPlansList.innerHTML=a.map(g=>{let rs=data.students.filter(x=>x.groupId===g.id),done=rs.filter(x=>x.post!==''&&x.post!=null).length;
+ return `<div class="card plan-group"><b>${esc(g.skill)}</b> <span class="pill">${esc(g.type)}</span><div class="small">${g.type==='إثرائية' ? `${g.names.length} طالبة` : `${g.names.length} طالبة • البعدي مسجل لـ ${done}/${g.names.length}`}</div><div class="actions teacher-only"><button class="btn" onclick="editGroupPlan('${g.id}')">${g.type==='إثرائية'?'✏️ فتح / تعديل':'✏️ فتح / إضافة البعدي'}</button><button class="btn danger" onclick="deleteGroupPlan('${g.id}')">🗑️ حذف</button></div></div>`}).join('')||'<p class="small">لا توجد خطط جماعية محفوظة لهذه الشعبة بعد.</p>'
+}
+function clearGroupForm(){
+ window.editingGroupId=null;groupSkill.value='';groupSkill.dataset.auto='1';groupNote.value='';groupType.value='علاجية';loadReadyAssessment();document.querySelectorAll('.student-pick').forEach(x=>x.checked=false);renderSelectedScores()
+}
+function addRosterName(){let n=prompt('اسم الطالبة الجديدة:');if(!n)return;data.rosters[activeSection]=data.rosters[activeSection]||[];if(!data.rosters[activeSection].includes(n))data.rosters[activeSection].push(n);persist();renderRoster()}
+
+function calcImpact(){
+ // Use matched before/after records only; blank inputs are not zero scores.
+ const pairs=(data.students||[]).filter(x=>x.type!=='إثرائية'&&x.pre!==''&&x.post!==''&&x.pre!=null&&x.post!=null&&Number.isFinite(Number(x.pre))&&Number.isFinite(Number(x.post))&&Number(x.pre)>=0&&Number(x.pre)<=100&&Number(x.post)>=0&&Number(x.post)<=100);
+ const avg=k=>pairs.length?pairs.reduce((sum,x)=>sum+Number(x[k]),0)/pairs.length:null;
+ const a=avg('pre'),b=avg('post');
+ autoPre.textContent=a===null?'—':a.toFixed(1)+'%';
+ autoPost.textContent=b===null?'—':b.toFixed(1)+'%';
+ autoGrowth.textContent=(a===null||b===null)?'—':(b-a).toFixed(1)+' نقطة مئوية';
+}function saveImpact(){data.globals.impactText=impactText.value;data.globals.recommendation=recommendation.value;persist()}function updateStats(){let d=Object.values(data.weeks).filter(x=>x.done).length,e=allEvidence().length;doneCount.textContent=d;evCount.textContent=e;sumDone.textContent=d+'/19';sumEv.textContent=e;sumStudents.textContent=data.students.length;sumImpact.textContent=data.globals.impactText?`أبرز أثر: ${data.globals.impactText}`:'';calcImpact()}
+
+function setTeacherEditing(ok){
+ document.querySelectorAll('#plans textarea,#plans input:not([type=file]),#plans select').forEach(el=>el.disabled=!ok);
+ document.querySelectorAll('#students input,#students select,#students textarea,#students button').forEach(el=>{if(!el.closest('.nav-bottom'))el.disabled=!ok});
+}
+function cloudStatusText(s){document.getElementById('cloudStatus').textContent=s;}
+async function teacherLogin(){try{await fbAuth.signInWithEmailAndPassword(document.getElementById('loginEmail').value.trim(),document.getElementById('loginPassword').value);document.getElementById('loginPassword').value='';}catch(e){cloudStatusText('تعذر تسجيل الدخول: '+e.message)}}
+async function teacherLogout(){cloudEnabled=false;clearTimeout(cloudTimer);await fbAuth.signOut()}
+function cloudSave(){if(!authorized()||!cloudEnabled){cloudStatusText('الحفظ على هذا الجهاز فقط حتى ربط السحابة');return;}clearTimeout(cloudTimer);cloudStatusText('جارٍ الحفظ السحابي…');cloudTimer=setTimeout(()=>writeCloud(),1300)}
+async function writeCloud(){if(!authorized()||!cloudEnabled||cloudBusy)return;cloudBusy=true;try{let payload=JSON.parse(JSON.stringify(data)),next='r'+Date.now()+'_'+Math.random().toString(36).slice(2);await fbDb.runTransaction(async tx=>{let snap=await tx.get(CLOUD_DOC),old=snap.exists?snap.data():null,rev=old?old._dalalRevision||null:null;if(rev!==cloudRevision)throw Error('تغيرت بيانات السحابة؛ أوقفنا الحفظ لحمايتها');if(old&&((old.students||[]).length>(payload.students||[]).length||(old.groupPlans||[]).length>(payload.groupPlans||[]).length))throw Error('النسخة المحلية أقل سجلات من السحابة');payload._dalalRevision=next;preserveCloudPeriodFields(payload,old);tx.set(CLOUD_DOC,payload)});cloudRevision=next;cloudStatusText('✅ تم الحفظ السحابي بنجاح');}catch(e){cloudEnabled=false;cloudStatusText('⚠️ لم يُحفظ سحابياً: '+e.message);alert('توقف الحفظ حماية للبيانات: '+e.message)}finally{cloudBusy=false}}
+function validCompleteCopy(d){
+ const r=d&&d.rosters||{}, w=d&&d.weeks||{};
+ const counts=['1','2','3'].map(k=>Array.isArray(r[k])?r[k].length:-1);
+ return counts.join(',')==='25,21,26' && Array.from({length:19},(_,i)=>String(i+1)).every(k=>w[k] && w[k].remedial && w[k].enrichment);
+}
+function downloadCloudBackup(remote){
+ const blob=new Blob([JSON.stringify(remote,null,2)],{type:'application/json'});
+ const url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='نسخة_السحابة_قبل_تحديث_ملف_الخطط_1448.json';
+ document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
+}
+async function manualCloudBackup(){
+ if(!authorized()){alert('سجلي الدخول بحساب المعلمة أولاً');return;}
+ if(cloudBusy){alert('عملية حفظ جارية، انتظري اكتمالها');return;}
+ if(!validCompleteCopy(data)){alert('توقف الحفظ: يلزم وجود 72 طالبة (25، 21، 26) والخطط العلاجية والإثرائية للأسابيع الـ19. لن تتغير السحابة.');return;}
+ cloudBusy=true;
+ try{
+  const snap=await CLOUD_DOC.get({source:'server'});
+  const old=snap.exists?snap.data():null;
+  const oldRev=old?old._dalalRevision||null:null;
+  if(old){
+   // Save previous server snapshot before any replacement.
+   downloadCloudBackup(old);
+   const oldStudents=(old.students||[]).length,oldGroups=(old.groupPlans||[]).length;
+   if(oldStudents>(data.students||[]).length || oldGroups>(data.groupPlans||[]).length){
+    alert('توقف الحفظ: النسخة السحابية تحتوي سجلات متابعة أكثر. تم تنزيل نسخة احتياطية منها، ولن نستبدلها تلقائياً.');return;
+   }
+  }
+  if(!confirm('تم فحص النسخة المحلية: 72 طالبة و19 أسبوعاً. '+(old?'نزلنا نسخة احتياطية للسحابة السابقة. ':'')+'هل تريدين الآن تحديث بيانات ملف الخطط في Firebase؟'))return;
+  const payload=JSON.parse(JSON.stringify(data));
+  const revisionNext='r'+Date.now()+'_'+Math.random().toString(36).slice(2);
+  payload._dalalRevision=revisionNext;
+  await fbDb.runTransaction(async tx=>{
+   const current=await tx.get(CLOUD_DOC);
+   const currentRev=current.exists?(current.data()._dalalRevision||null):null;
+   if(currentRev!==oldRev)throw Error('تغيرت نسخة السحابة أثناء الحفظ، توقف التحديث حمايةً لبياناتك');
+   const original=current.exists?current.data():null;
+   if(original&&((original.students||[]).length>(payload.students||[]).length||(original.groupPlans||[]).length>(payload.groupPlans||[]).length))throw Error('يوجد سجلات أكثر في السحابة، أوقفنا الاستبدال');
+   preserveCloudPeriodFields(payload,original);tx.set(CLOUD_DOC,payload);
+  });
+  const verified=await CLOUD_DOC.get({source:'server'});
+  const saved=verified.data();
+  if(!verified.exists||saved._dalalRevision!==revisionNext||!validCompleteCopy(saved))throw Error('لم يكتمل التحقق من النسخة السحابية. لا تستوردي أو تحذفي بيانات حالياً.');
+  cloudRevision=revisionNext;cloudEnabled=true;
+  cloudStatusText('✅ تم حفظ النسخة الكاملة سحابياً والتحقق منها: 72 طالبة و19 أسبوعاً');
+  alert('نجح حفظ النسخة الكاملة في Firebase والتحقق منها: 72 طالبة و19 أسبوعاً.');
+ }catch(e){cloudEnabled=false;cloudStatusText('تعذر تحديث السحابة: '+e.message);alert('لم يكتمل حفظ النسخة السحابية: '+e.message)}
+ finally{cloudBusy=false;}
+}
+async function loadCloudManually(){if(!authorized()){alert('سجلي الدخول أولاً');return;}try{let snap=await CLOUD_DOC.get({source:'server'});if(!snap.exists){cloudStatusText('لا توجد نسخة في السحابة لهذا الملف');return;}if(!confirm('احفظي أولاً نسخة JSON من الجهاز. هل تريدين استبدال النسخة المحلية بالنسخة السحابية؟'))return;let remote=snap.data();if(!remote.weeks||!remote.rosters)throw Error('ملف السحابة لا يطابق بنية الخطط');data=remote;localStorage.setItem(LOCAL_KEY,JSON.stringify(data));cloudRevision=remote._dalalRevision||null;cloudEnabled=true;renderAll();cloudStatusText('✅ تم تحميل البيانات السحابية؛ الحفظ التلقائي مفعل')}catch(e){cloudStatusText('تعذر تحميل السحابة: '+e.message)}}
+// Automatically read the authoritative cloud copy after teacher authentication.
+// Preserve the previous device copy before replacement, so it can be recovered.
+let authSyncGeneration=0;
+async function autoLoadCloudAfterLogin(generation){
+ cloudStatusText('جارٍ تحميل بياناتك من السحابة تلقائيًا…');
+ cloudBusy=true;
+ try{
+  const snap=await CLOUD_DOC.get({source:'server'});
+  if(generation!==authSyncGeneration||!authorized())return;
+  if(!snap.exists){cloudStatusText('لا توجد نسخة سحابية؛ البيانات المحلية لم تتغير');return;}
+  const remote=snap.data();
+  if(!remote||!remote.weeks||!remote.rosters)throw Error('بنية النسخة السحابية غير صحيحة');
+  const localJson=JSON.stringify(data);
+  // Never silently discard the prior local copy; keep a separate recoverable snapshot.
+  const backupKey=LOCAL_KEY+'_before_auto_cloud_load';
+  localStorage.setItem(backupKey,localJson);
+  localStorage.setItem(LOCAL_KEY,JSON.stringify(remote));
+  data=remote;
+  cloudRevision=remote._dalalRevision||null;
+  cloudEnabled=true;
+  renderAll();
+  cloudStatusText('✅ تم تحميل بيانات السحابة تلقائيًا وتفعيل الحفظ؛ حُفظت نسخة الجهاز السابقة احتياطيًا');
+ }catch(e){
+  cloudEnabled=false;
+  cloudStatusText('⚠️ تعذّر التحميل التلقائي؛ لم نستبدل بيانات الجهاز: '+e.message);
+ }finally{if(generation===authSyncGeneration)cloudBusy=false;}
+}
+fbAuth.onAuthStateChanged(u=>{
+ const generation=++authSyncGeneration;
+ const ok=!!(u&&u.uid===TEACHER_UID);
+ if(u&&!ok){fbAuth.signOut();alert('حساب غير مصرح له');return;}
+ cloudEnabled=false;cloudRevision=null;clearTimeout(cloudTimer);
+ document.body.classList.toggle('teacher-mode',ok);
+ setTeacherEditing(ok);
+ document.getElementById('loginFields').style.display=ok?'none':'block';
+ if(ok){showPage('home');autoLoadCloudAfterLogin(generation)}
+ else{cloudBusy=false;cloudStatusText('غير متصلة — الحفظ محلي فقط')}
+});
+function exportData(){let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='نسخة_بيانات_ملف_دلال_فيزياء3.json';a.click()}function importData(e){let r=new FileReader();r.onload=()=>{try{data=JSON.parse(r.result);cloudEnabled=false;cloudRevision=null;clearTimeout(cloudTimer);persist();renderAll();cloudStatusText('تم الاستيراد محلياً؛ فحص السحابة مطلوب')}catch{alert('ملف غير صالح')}};if(e.target.files[0])r.readAsText(e.target.files[0])}
+
+// Period grades are stored in separate fields within the protected Firestore plans document.
+// Only an explicit local export transfers these scores out of this browser.
+const PERIOD_KEY='dalalPhysics3_periodGrades_1448_local_v1';
+let gradeSection='1', periodGrades={};
+try { const saved=JSON.parse(localStorage.getItem(PERIOD_KEY)||'{}'); if(saved&&typeof saved==='object'&&!Array.isArray(saved))periodGrades=saved; }catch(e){}
+const gradeIdentifier=(cls,name)=>String(cls)+'::'+name;
+function getDiagnosticGrade(cls,name){
+ const candidates=(data.students||[]).filter(x=>String(x.cls)===String(cls)&&x.name===name&&x.type==='علاجية'&&x.pre!==''&&x.pre!==null&&x.pre!==undefined&&Number.isFinite(Number(x.pre)));
+ if(!candidates.length)return null;
+ const val=Number(candidates[candidates.length-1].pre);
+ return val>=0&&val<=20?val:null;
+}
+function setGradeSection(cls){gradeSection=cls;renderPeriodGrades()}
+function renderPeriodGrades(){
+ const tabs=document.querySelectorAll('#gradeTabs button');tabs.forEach((b,i)=>b.classList.toggle('active',String(i+1)===gradeSection));
+ const rosters=data.rosters||{};
+ const list=rosters[gradeSection]||[];
+ const root=document.getElementById('gradeRows'); if(!root)return;
+ root.innerHTML=list.map((name,i)=>{
+   const key=gradeIdentifier(gradeSection,name),pre=getDiagnosticGrade(gradeSection,name);
+   const has=Object.prototype.hasOwnProperty.call(periodGrades,key);
+   const v=has?Number(periodGrades[key]):null;
+   const delta=pre===null||v===null?'—':(v>pre?'تحسن +':v<pre?'انخفاض ':'ثبات ')+(v===pre?'0':Math.abs(v-pre).toFixed(1));
+   return `<tr><td style="text-align:right">${i+1}. ${esc(name)}</td><td>${pre===null?'—':pre+'/20'}</td><td><input type="number" inputmode="decimal" min="0" max="20" step="0.5" style="min-width:76px" value="${v===null?'':v}" aria-label="درجة الفترة: ${esc(name)}" onchange="savePeriodGrade('${gradeSection}',${i},this)"></td><td>${esc(delta)}</td></tr>`;
+ }).join('')||'<tr><td colspan="4">لم تُحمّل أسماء هذه الشعبة بعد؛ يلزم تسجيل الدخول وتحميل بيانات السحابة.</td></tr>';
+ const all=Object.entries(rosters).flatMap(([cl,ns])=>(ns||[]).map(name=>({cl,name})));
+ const entered=all.filter(x=>Object.prototype.hasOwnProperty.call(periodGrades,gradeIdentifier(x.cl,x.name)));
+ const paired=entered.filter(x=>getDiagnosticGrade(x.cl,x.name)!==null);
+ document.getElementById('gradesFilled').textContent=entered.length+' / '+all.length;
+ document.getElementById('gradesPaired').textContent=paired.length;
+ document.getElementById('gradesMean').textContent=entered.length?(entered.reduce((a,x)=>a+Number(periodGrades[gradeIdentifier(x.cl,x.name)]),0)/entered.length).toFixed(2)+'/20':'—';
+ const sectionEntered=list.filter(name=>Object.prototype.hasOwnProperty.call(periodGrades,gradeIdentifier(gradeSection,name)));
+ const sTotal=sectionEntered.reduce((a,name)=>a+Number(periodGrades[gradeIdentifier(gradeSection,name)]),0);
+ document.getElementById('gradeSectionStats').textContent='الشعبة '+gradeSection+': '+sectionEntered.length+' من '+list.length+' درجات مدخلة، والمتوسط '+(sectionEntered.length?(sTotal/sectionEntered.length).toFixed(2)+'/20':'—')+' (للمدخلات فقط).';
+}
+function savePeriodGrade(cls,index,el){
+ const list=(data.rosters||{})[cls]||[],name=list[index];if(!name)return;
+ const raw=el.value.trim(),key=gradeIdentifier(cls,name);
+ if(raw!==''&&(!Number.isFinite(Number(raw))||Number(raw)<0||Number(raw)>20)){
+   alert('الدرجة يجب أن تكون من 0 إلى 20 فقط.');renderPeriodGrades();return;
+ }
+ const draft={...periodGrades};
+ if(raw==='')delete draft[key];else draft[key]=Number(raw);
+ try{localStorage.setItem(PERIOD_KEY,JSON.stringify(draft));periodGrades=draft;document.getElementById('gradeSaveStatus').textContent='✅ حُفظت درجة الفترة على هذا الجهاز فقط. نزّلي نسخة JSON للحفاظ عليها.';renderPeriodGrades()}
+ catch(e){alert('تعذر الحفظ المحلي. لا تغلقي الصفحة قبل تنزيل نسخة من الدرجات: '+e.message)}
+}
+function downloadGradeFile(content,filename,mime){
+ const blob=new Blob([content],{type:mime}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);
+}
+// A dedicated minimal transaction updates only three grade fields in the authoritative document.
+function gradeCloudMessage(msg){const el=document.getElementById('gradeCloudStatus');if(el)el.textContent=msg;}
+function validateCompletePeriodGrades(grades,rosters){
+ const expected=new Set(['1','2','3'].flatMap(cl=>(rosters[cl]||[]).map(name=>gradeIdentifier(cl,name))));
+ if(expected.size!==72||[1,2,3].map(cl=>(rosters[String(cl)]||[]).length).join(',')!=='25,21,26')throw Error('قائمة الطالبات لا تحتوي على 72 اسمًا مع توزيع الشعب المعتمد');
+ const keys=Object.keys(grades||{});
+ if(keys.length!==72||keys.some(k=>!expected.has(k))||keys.some(k=>typeof grades[k]!=='number'||!Number.isFinite(grades[k])||grades[k]<0||grades[k]>20))throw Error('درجات الفترة غير مكتملة أو الأسماء لا تطابق سجل الشعب؛ المطلوب 72 درجة صحيحة');
+ return true;
+}
+async function savePeriodGradesToCloud(){
+ if(!authorized()||!cloudEnabled){gradeCloudMessage('⚠️ سجلي دخول المعلمة وانتظري اكتمال تحميل السحابة أولًا.');return;}
+ if(cloudBusy){gradeCloudMessage('⚠️ هناك عملية حفظ أخرى جارية؛ أعيدي المحاولة بعد اكتمالها.');return;}
+ try{
+  validateCompletePeriodGrades(periodGrades,data.rosters||{});
+  const frozen=JSON.parse(JSON.stringify(periodGrades));
+  const before=await CLOUD_DOC.get({source:'server'});
+  if(!before.exists||before.data()._dalalRevision!==cloudRevision)throw Error('تغيّرت نسخة الخطط في السحابة؛ حمّلي بياناتها من جديد قبل حفظ الدرجات');
+  if(!validCompleteCopy(before.data()))throw Error('بيانات الخطط في السحابة غير مكتملة؛ لن تُحفظ الدرجات');
+  validateCompletePeriodGrades(frozen,before.data().rosters||{});
+  const old=before.data().periodGrades1448;
+  if(old && !confirm('السحابة تحتوي درجات فترة سابقة. احفظي نسخة احتياطية منها أولًا بواسطة زر الاسترجاع ثم تنزيل JSON. هل تريدين استبدال درجات الفترة فقط؟'))return;
+  if(!confirm('سيُحفظ عدد 72 درجة فترة في السحابة دون استبدال الخطط أو الشواهد. هل تؤكدين؟'))return;
+  const revision='p'+Date.now()+'_'+Math.random().toString(36).slice(2);
+  const oldRevision=before.data().periodGradesRevision1448||null;
+  cloudBusy=true;
+  gradeCloudMessage('⏳ يجري حفظ درجات الفترة والتحقق منها من الخادم...');
+  await fbDb.runTransaction(async tx=>{
+   const snap=await tx.get(CLOUD_DOC);
+   if(!snap.exists||snap.data()._dalalRevision!==cloudRevision||(snap.data().periodGradesRevision1448||null)!==oldRevision)throw Error('تغيّرت بيانات السحابة أثناء العملية، وتم إيقاف الحفظ');
+   validateCompletePeriodGrades(frozen,snap.data().rosters||{});
+   tx.update(CLOUD_DOC,{periodGrades1448:frozen,periodGradesRevision1448:revision,periodGradesUpdatedAt1448:new Date().toISOString()});
+  });
+  const check=await CLOUD_DOC.get({source:'server'});
+  const remote=check.exists?check.data():null;
+  if(!remote||remote.periodGradesRevision1448!==revision||JSON.stringify(Object.entries(remote.periodGrades1448||{}).sort())!==JSON.stringify(Object.entries(frozen).sort()))throw Error('تعذّر التحقق من التطابق بعد الحفظ');
+  gradeCloudMessage('✅ تم حفظ درجات الفترة الـ72 والتحقق من تطابقها مع السحابة.');
+  alert('✅ نجح حفظ درجات الفترة الـ72 والتحقق منها في السحابة.');
+ }catch(e){gradeCloudMessage('⚠️ لم يتأكد الحفظ السحابي: '+e.message);alert('لم نتمكن من تأكيد حفظ الدرجات: '+e.message)}
+ finally{cloudBusy=false}
+}
+async function loadPeriodGradesFromCloud(){
+ if(!authorized()||!cloudEnabled){gradeCloudMessage('⚠️ يلزم تسجيل الدخول وتحميل الخطط من السحابة أولًا.');return;}
+ if(cloudBusy){gradeCloudMessage('⚠️ عملية أخرى جارية.');return;}
+ try{
+  const snap=await CLOUD_DOC.get({source:'server'});
+  if(!snap.exists||!snap.data().periodGrades1448)throw Error('لا توجد درجات فترة محفوظة في السحابة بعد');
+  const remote=snap.data().periodGrades1448;
+  validateCompletePeriodGrades(remote,snap.data().rosters||{});
+  if(!confirm('سيتم تنزيل 72 درجة من السحابة إلى هذا الجهاز وقد تحل محل الدرجات المحلية. احفظي نسخة JSON محلية أولًا إن كان لديك تعديل جديد. متابعة؟'))return;
+  localStorage.setItem(PERIOD_KEY+'_before_cloud_download',JSON.stringify(periodGrades));
+  localStorage.setItem(PERIOD_KEY,JSON.stringify(remote));
+  periodGrades=JSON.parse(JSON.stringify(remote));renderPeriodGrades();
+  gradeCloudMessage('✅ تم استرجاع 72 درجة من السحابة، وحفظ نسخة من الدرجات المحلية السابقة على هذا الجهاز.');
+ }catch(e){gradeCloudMessage('⚠️ تعذّر استرجاع درجات الفترة: '+e.message)}
+}
+function periodGradePayload(){return {kind:'dalal-period-grades-v1',year:'1448',scale:20,exportedAt:new Date().toISOString(),grades:periodGrades}}
+function exportPeriodGrades(){downloadGradeFile(JSON.stringify(periodGradePayload(),null,2),'درجات_الفترة_فيزياء3_1448.json','application/json');document.getElementById('gradeSaveStatus').textContent='✅ تم إعداد تنزيل نسخة درجات الفترة JSON.'}
+function exportPeriodCSV(){
+ const r=data.rosters||{},escCSV=x=>'"'+String(x??'').replace(/"/g,'""')+'"';
+ const rows=[['الشعبة','اسم الطالبة','التشخيصي من 20','الفترة من 20','التغير']];
+ Object.entries(r).forEach(([cls,names])=>(names||[]).forEach(name=>{const key=gradeIdentifier(cls,name),pre=getDiagnosticGrade(cls,name),grade=Object.prototype.hasOwnProperty.call(periodGrades,key)?Number(periodGrades[key]):null;rows.push([cls,name,pre===null?'':pre,grade===null?'':grade,(pre===null||grade===null)?'':grade-pre])}));
+ downloadGradeFile('\uFEFF'+rows.map(row=>row.map(escCSV).join(',')).join('\r\n'),'درجات_الفترة_فيزياء3_1448.csv','text/csv;charset=utf-8');
+}
+function importPeriodGrades(event){
+ const file=event.target.files&&event.target.files[0];if(!file)return;
+ const reader=new FileReader();reader.onload=()=>{
+  try{
+   const parsed=JSON.parse(reader.result);
+   if(parsed.kind!=='dalal-period-grades-v1'||parsed.scale!==20||!parsed.grades||typeof parsed.grades!=='object'||Array.isArray(parsed.grades))throw Error('نوع ملف درجات الفترة غير صحيح');
+   const incoming={};
+   Object.entries(parsed.grades).forEach(([key,v])=>{if(!/^([123])::/.test(key)||!Number.isFinite(Number(v))||v===null||Number(v)<0||Number(v)>20)throw Error('درجة أو شعبة غير صالحة');incoming[key]=Number(v)});
+   if(!confirm('استيراد '+Object.keys(incoming).length+' درجة سيستبدل درجات الفترة المخزنة على هذا الجهاز فقط، ولن يغيّر السحابة. متابعة؟'))return;
+   localStorage.setItem(PERIOD_KEY,JSON.stringify(incoming));periodGrades=incoming;renderPeriodGrades();document.getElementById('gradeSaveStatus').textContent='✅ تم استيراد درجات الفترة محليًا فقط.';
+  }catch(e){alert('تعذر استيراد ملف درجات الفترة: '+e.message)}
+ };reader.readAsText(file);event.target.value='';
+}
+
+function renderAll(){distTable.innerHTML=dist.map(x=>`<tr><td>${x[0]}</td><td>${esc(x[1])}</td></tr>`).join('');evWeekFilter.innerHTML='<option value="">كل الأسابيع</option>'+dist.map(x=>`<option value="${x[0]}">الأسبوع ${x[0]}</option>`).join('');renderWeeks();initGroupWeek();renderRoster();renderGroupPlans();renderEvidence();renderPeriodGrades();impactText.value=data.globals.impactText||'';recommendation.value=data.globals.recommendation||'';updateStats()}renderAll();setSection('1',document.querySelector('#sectionTabs button'));showPage('home');document.body.classList.remove('teacher-mode');setTeacherEditing(false);const cs=document.getElementById('cloudStatus');if(cs)cs.textContent='غير متصلة — سجّلي الدخول لتحميل بيانات السحابة تلقائيًا';
+</script></body></html>
